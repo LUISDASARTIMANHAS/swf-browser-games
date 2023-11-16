@@ -1,0 +1,5 @@
+Place this movieclip on your root timeline.
+--- RECORDSEPARATOR ---
+This clip will automatically hide itself unless neeeded.
+--- RECORDSEPARATOR ---
+(Error messages appear on frames 2 and 3)
