@@ -119,7 +119,7 @@ package org.flixel
          if(this._animations != null)
          {
             _loc2_ = 0;
-            _loc3_ = this._animations.length;
+            _loc3_ = uint(this._animations.length);
             while(_loc2_ < _loc3_)
             {
                _loc1_ = this._animations[_loc2_++];
@@ -205,13 +205,13 @@ package org.flixel
          var _loc20_:uint = 0;
          var _loc21_:uint = 0;
          var _loc22_:uint = 0;
-         var _loc6_:uint = Math.sqrt(param2);
+         var _loc6_:uint = uint(Math.sqrt(param2));
          var _loc7_:BitmapData = FlxG.addBitmap(param1);
          if(param3 >= 0)
          {
             _loc12_ = _loc7_;
             _loc7_ = new BitmapData(_loc12_.height,_loc12_.height);
-            _loc13_ = uint(param3 * _loc7_.width);
+            _loc13_ = param3 * _loc7_.width;
             _loc14_ = 0;
             _loc15_ = uint(_loc12_.width);
             if(_loc13_ >= _loc15_)
@@ -360,7 +360,7 @@ package org.flixel
          while(false);
          
          var _loc2_:uint = 0;
-         var _loc3_:uint = cameras.length;
+         var _loc3_:uint = uint(cameras.length);
          while(_loc2_ < _loc3_)
          {
             _loc1_ = cameras[_loc2_++];
@@ -537,7 +537,7 @@ package org.flixel
          while(false);
          
          var _loc3_:uint = 0;
-         var _loc4_:uint = this._animations.length;
+         var _loc4_:uint = uint(this._animations.length);
          while(_loc3_ < _loc4_)
          {
             if(this._animations[_loc3_].name == param1)

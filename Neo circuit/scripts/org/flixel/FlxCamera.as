@@ -311,7 +311,7 @@ package org.flixel
          this._fxFlashColor = param1;
          if(param2 <= 0)
          {
-            param2 = Number.MIN_VALUE;
+            param2 = Number(Number.MIN_VALUE);
          }
          this._fxFlashDuration = param2;
          this._fxFlashComplete = param3;
@@ -327,7 +327,7 @@ package org.flixel
          this._fxFadeColor = param1;
          if(param2 <= 0)
          {
-            param2 = Number.MIN_VALUE;
+            param2 = Number(Number.MIN_VALUE);
          }
          this._fxFadeDuration = param2;
          this._fxFadeComplete = param3;

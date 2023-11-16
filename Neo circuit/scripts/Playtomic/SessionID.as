@@ -18,9 +18,9 @@ package Playtomic
       public static function Create() : String
       {
          var _loc1_:Date = new Date();
-         var _loc2_:Number = _loc1_.getTime();
+         var _loc2_:Number = Number(_loc1_.getTime());
          var _loc3_:Number = Math.random() * Number.MAX_VALUE;
-         var _loc4_:String = Capabilities.serverString;
+         var _loc4_:String = String(Capabilities.serverString);
          var _loc5_:String = _loc2_ + _loc4_ + _loc3_ + counter++;
          return binb2hex(core_sha1(str2binb(_loc5_),_loc5_.length * 8));
       }

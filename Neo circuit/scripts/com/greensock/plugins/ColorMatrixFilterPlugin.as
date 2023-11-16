@@ -65,8 +65,8 @@ package com.greensock.plugins
             return param1;
          }
          param2 *= Math.PI / 180;
-         var _loc3_:Number = Math.cos(param2);
-         var _loc4_:Number = Math.sin(param2);
+         var _loc3_:Number = Number(Math.cos(param2));
+         var _loc4_:Number = Number(Math.sin(param2));
          var _loc5_:Array = [_lumR + _loc3_ * (1 - _lumR) + _loc4_ * -_lumR,_lumG + _loc3_ * -_lumG + _loc4_ * -_lumG,_lumB + _loc3_ * -_lumB + _loc4_ * (1 - _lumB),0,0,_lumR + _loc3_ * -_lumR + _loc4_ * 0.143,_lumG + _loc3_ * (1 - _lumG) + _loc4_ * 0.14,_lumB + _loc3_ * -_lumB + _loc4_ * -0.283,0,0,_lumR + _loc3_ * -_lumR + _loc4_ * -(1 - _lumR),_lumG + _loc3_ * -_lumG + _loc4_ * _lumG,_lumB + _loc3_ * (1 - _lumB) + _loc4_ * _lumB,0,0,0,0,0,1,0,0,0,0,0,1];
          return applyMatrix(_loc5_,param1);
       }

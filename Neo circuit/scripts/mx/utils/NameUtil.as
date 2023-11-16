@@ -26,14 +26,14 @@ package mx.utils
          {
             return null;
          }
-         var _loc2_:* = getQualifiedClassName(param1);
-         var _loc3_:int = _loc2_.indexOf("::");
+         var _loc2_:* = String(getQualifiedClassName(param1));
+         var _loc3_:int = int(_loc2_.indexOf("::"));
          if(_loc3_ != -1)
          {
-            _loc2_ = _loc2_.substr(_loc3_ + 2);
+            _loc2_ = String(_loc2_.substr(_loc3_ + 2));
          }
          var _loc4_:int;
-         if((_loc4_ = _loc2_.charCodeAt(_loc2_.length - 1)) >= 48 && _loc4_ <= 57)
+         if((_loc4_ = int(_loc2_.charCodeAt(_loc2_.length - 1))) >= 48 && _loc4_ <= 57)
          {
             _loc2_ += "_";
          }
@@ -55,7 +55,7 @@ package mx.utils
                {
                   break;
                }
-               _loc4_ = "id" in _loc3_ && Boolean(_loc3_["id"]) ? String(_loc3_["id"]) : _loc3_.name;
+               _loc4_ = "id" in _loc3_ && Boolean(_loc3_["id"]) ? String(_loc3_["id"]) : String(_loc3_.name);
                if(_loc3_ is IRepeaterClient)
                {
                   if(_loc5_ = IRepeaterClient(_loc3_).instanceIndices)
@@ -78,16 +78,16 @@ package mx.utils
          var _loc2_:String = null;
          if(param1 is String)
          {
-            _loc2_ = param1 as String;
+            _loc2_ = String(param1 as String);
          }
          else
          {
-            _loc2_ = getQualifiedClassName(param1);
+            _loc2_ = String(getQualifiedClassName(param1));
          }
-         var _loc3_:int = _loc2_.indexOf("::");
+         var _loc3_:int = int(_loc2_.indexOf("::"));
          if(_loc3_ != -1)
          {
-            _loc2_ = _loc2_.substr(_loc3_ + 2);
+            _loc2_ = String(_loc2_.substr(_loc3_ + 2));
          }
          return _loc2_;
       }

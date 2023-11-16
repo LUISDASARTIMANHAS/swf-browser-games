@@ -73,7 +73,7 @@ package mochi.as3
                {
                   options.score = options.score.value;
                }
-               n = Number(options.score);
+               n = Number(Number(options.score));
                if(!isNaN(n))
                {
                   if(!(n == Number.NEGATIVE_INFINITY || n == Number.POSITIVE_INFINITY))
@@ -163,7 +163,7 @@ package mochi.as3
       
       public static function submit(param1:Number, param2:String, param3:Object = null, param4:Object = null) : void
       {
-         param1 = Number(param1);
+         param1 = Number(Number(param1));
          if(!isNaN(param1))
          {
             if(!(param1 == Number.NEGATIVE_INFINITY || param1 == Number.POSITIVE_INFINITY))
@@ -171,7 +171,7 @@ package mochi.as3
                if(Math.floor(param1) != param1)
                {
                }
-               param1 = Number(param1);
+               param1 = Number(Number(param1));
             }
          }
          MochiServices.send("scores_submit",{

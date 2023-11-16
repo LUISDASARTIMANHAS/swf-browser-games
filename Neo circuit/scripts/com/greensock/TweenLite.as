@@ -103,7 +103,7 @@ package com.greensock
          do
          {
             this._ease = defaultEase;
-            this._overwrite = Number(param3.overwrite) <= -1 || !overwriteManager.enabled && param3.overwrite > 1 ? int(overwriteManager.mode) : int(param3.overwrite);
+            this._overwrite = Number(param3.overwrite) <= -1 || !overwriteManager.enabled && param3.overwrite > 1 ? int(overwriteManager.mode) : int(int(param3.overwrite));
          }
          while(false);
          
@@ -355,7 +355,7 @@ package com.greensock
             }
             else
             {
-               this.cachedPT1 = new PropTween(this.target,_loc1_,Number(this.target[_loc1_]),typeof this.vars[_loc1_] == "number" ? Number(this.vars[_loc1_]) - this.target[_loc1_] : Number(this.vars[_loc1_]),_loc1_,false,this.cachedPT1);
+               this.cachedPT1 = new PropTween(this.target,_loc1_,Number(this.target[_loc1_]),typeof this.vars[_loc1_] == "number" ? Number(this.vars[_loc1_]) - this.target[_loc1_] : Number(Number(this.vars[_loc1_])),_loc1_,false,this.cachedPT1);
                this.propTweenLookup[_loc1_] = this.cachedPT1;
                if(true)
                {

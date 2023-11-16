@@ -205,7 +205,7 @@ package org.flixel.system
          if(param1 is FlxGroup)
          {
             _loc3_ = 0;
-            _loc6_ = (_loc5_ = (param1 as FlxGroup).members).length;
+            _loc6_ = uint((_loc5_ = (param1 as FlxGroup).members).length);
             while(_loc3_ < _loc6_)
             {
                if((_loc4_ = _loc5_[_loc3_++] as FlxBasic) != null && _loc4_.exists)

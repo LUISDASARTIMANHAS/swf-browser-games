@@ -89,7 +89,7 @@ package org.flixel
       
       public function set text(param1:String) : void
       {
-         var _loc2_:String = this._textField.text;
+         var _loc2_:String = String(this._textField.text);
          this._textField.text = param1;
          if(this._textField.text != _loc2_)
          {

@@ -34,7 +34,7 @@ package mochi.as3
       
       public function setValue(param1:Number = 0, param2:uint = 0) : void
       {
-         var _loc3_:String = param1.toString();
+         var _loc3_:String = String(param1.toString());
          this.Fragment = _loc3_.charCodeAt(param2++) ^ this.Encoder;
          if(param2 < _loc3_.length)
          {
@@ -56,7 +56,7 @@ package mochi.as3
       
       public function toString() : String
       {
-         var _loc1_:String = String.fromCharCode(this.Fragment ^ this.Encoder);
+         var _loc1_:String = String(String.fromCharCode(this.Fragment ^ this.Encoder));
          if(this.Sibling != null)
          {
             _loc1_ += this.Sibling.toString();

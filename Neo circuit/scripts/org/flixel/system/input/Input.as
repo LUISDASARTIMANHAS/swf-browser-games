@@ -130,7 +130,7 @@ package org.flixel.system.input
          var _loc4_:Object = null;
          var _loc5_:Object = null;
          var _loc2_:uint = 0;
-         var _loc3_:uint = param1.length;
+         var _loc3_:uint = uint(param1.length);
          while(_loc2_ < _loc3_)
          {
             _loc4_ = param1[_loc2_++];

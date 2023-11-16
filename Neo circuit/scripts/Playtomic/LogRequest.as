@@ -32,7 +32,7 @@ package Playtomic
       internal function MassQueue(param1:Array) : void
       {
          var _loc3_:LogRequest = null;
-         var _loc2_:int = int(param1.length - 1);
+         var _loc2_:int = param1.length - 1;
          while(_loc2_ > -1)
          {
             this.Queue(param1[_loc2_]);

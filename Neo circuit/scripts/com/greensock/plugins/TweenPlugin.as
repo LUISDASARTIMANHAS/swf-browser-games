@@ -115,7 +115,7 @@ package com.greensock.plugins
          var _loc6_:Number = NaN;
          if(param4 != null)
          {
-            if((_loc6_ = typeof param4 == "number" ? Number(param4) - param3 : Number(param4)) != 0)
+            if((_loc6_ = typeof param4 == "number" ? Number(param4) - param3 : Number(Number(param4))) != 0)
             {
                this._tweens[this._tweens.length] = new PropTween(param1,param2,param3,_loc6_,param5 || param2,false);
             }

@@ -25,8 +25,8 @@ package utils
       
       public static function ReplaceCharAt(param1:String, param2:String, param3:int) : String
       {
-         var _loc4_:String = param1.substring(0,param3);
-         var _loc5_:String = param1.substring(param3 + 1,param1.length);
+         var _loc4_:String = String(param1.substring(0,param3));
+         var _loc5_:String = String(param1.substring(param3 + 1,param1.length));
          return _loc4_ + param2 + _loc5_;
       }
       
@@ -71,18 +71,18 @@ package utils
       
       public static function StipCarriageReturns(param1:String) : String
       {
-         var _loc2_:String = param1.replace(/\n/g,"");
-         return _loc2_.replace(/\r/g,"");
+         var _loc2_:String = String(param1.replace(/\n/g,""));
+         return String(_loc2_.replace(/\r/g,""));
       }
       
       public static function GetCharCount(param1:String, param2:String) : int
       {
          var _loc4_:int = 0;
-         var _loc3_:int = param2.indexOf(param1);
+         var _loc3_:int = int(param2.indexOf(param1));
          while(_loc3_ >= 0)
          {
             _loc4_++;
-            _loc3_ = param2.indexOf(param1,_loc3_ + 1);
+            _loc3_ = int(param2.indexOf(param1,_loc3_ + 1));
          }
          return _loc4_;
       }
@@ -122,12 +122,12 @@ package utils
          var _loc3_:* = "";
          _loc5_ = rest;
          var _loc6_:int = 0;
-         var _loc7_:int = param1.length;
+         var _loc7_:int = int(param1.length);
          while(_loc6_ < _loc7_)
          {
-            if((_loc4_ = param1.charAt(_loc6_)) == "%")
+            if((_loc4_ = String(param1.charAt(_loc6_))) == "%")
             {
-               if((_loc4_ = param1.charAt(++_loc6_)) == "%")
+               if((_loc4_ = String(param1.charAt(++_loc6_))) == "%")
                {
                   _loc3_ += "%";
                }
@@ -161,38 +161,38 @@ package utils
                      {
                         _loc14_ = true;
                      }
-                     _loc4_ = param1.charAt(++_loc6_);
+                     _loc4_ = String(param1.charAt(++_loc6_));
                   }
                   _loc15_ = false;
                   _loc16_ = "";
                   if(_loc4_ == "*")
                   {
                      _loc15_ = true;
-                     _loc4_ = param1.charAt(++_loc6_);
+                     _loc4_ = String(param1.charAt(++_loc6_));
                   }
                   else
                   {
                      while(_loc4_ == "1" || _loc4_ == "2" || _loc4_ == "3" || _loc4_ == "4" || _loc4_ == "5" || _loc4_ == "6" || _loc4_ == "7" || _loc4_ == "8" || _loc4_ == "9" || _loc4_ == "0")
                      {
                         _loc16_ += _loc4_;
-                        _loc4_ = param1.charAt(++_loc6_);
+                        _loc4_ = String(param1.charAt(++_loc6_));
                      }
                   }
                   _loc17_ = false;
                   _loc18_ = "";
                   if(_loc4_ == ".")
                   {
-                     if((_loc4_ = param1.charAt(++_loc6_)) == "*")
+                     if((_loc4_ = String(param1.charAt(++_loc6_))) == "*")
                      {
                         _loc17_ = true;
-                        _loc4_ = param1.charAt(++_loc6_);
+                        _loc4_ = String(param1.charAt(++_loc6_));
                      }
                      else
                      {
                         while(_loc4_ == "1" || _loc4_ == "2" || _loc4_ == "3" || _loc4_ == "4" || _loc4_ == "5" || _loc4_ == "6" || _loc4_ == "7" || _loc4_ == "8" || _loc4_ == "9" || _loc4_ == "0")
                         {
                            _loc18_ += _loc4_;
-                           _loc4_ = param1.charAt(++_loc6_);
+                           _loc4_ = String(param1.charAt(++_loc6_));
                         }
                      }
                   }
@@ -213,27 +213,27 @@ package utils
                      }
                      while(!(§§pop() || _loc4_ == "L"))
                      {
-                        _loc23_ = int(_loc16_);
+                        _loc23_ = int(int(_loc16_));
                         if(false)
                         {
                            §§goto(addr137);
                         }
                         else
                         {
-                           _loc24_ = int(_loc9_ = _loc18_);
+                           _loc24_ = int(int(_loc9_ = _loc18_));
                            _loc25_ = _loc14_ ? "0" : " ";
                            if(_loc17_)
                            {
-                              _loc24_ = int(_loc9_ = _loc5_.shift());
+                              _loc24_ = int(int(_loc9_ = _loc5_.shift()));
                            }
                            if(_loc15_)
                            {
-                              _loc23_ = int(_loc5_.shift());
+                              _loc23_ = int(int(_loc5_.shift()));
                            }
                            switch(_loc4_)
                            {
                               case "c":
-                                 _loc22_ = String.fromCharCode(int(_loc5_.shift()) & 255);
+                                 _loc22_ = String(String.fromCharCode(int(_loc5_.shift()) & 255));
                                  if(_loc23_ != 0)
                                  {
                                     _loc22_ = pad(_loc22_,_loc23_,_loc10_,_loc25_);
@@ -242,18 +242,18 @@ package utils
                               case "d":
                               case "i":
                               case "o":
-                                 _loc26_ = int(_loc5_.shift());
+                                 _loc26_ = int(int(_loc5_.shift()));
                                  if(_loc19_)
                                  {
                                     _loc26_ &= 65535;
                                  }
                                  if(_loc4_ == "o")
                                  {
-                                    _loc22_ = _loc26_.toString(8);
+                                    _loc22_ = String(_loc26_.toString(8));
                                  }
                                  else
                                  {
-                                    _loc22_ = _loc26_.toString();
+                                    _loc22_ = String(_loc26_.toString());
                                  }
                                  if(_loc24_ != 0)
                                  {
@@ -293,7 +293,7 @@ package utils
                               case "u":
                               case "x":
                               case "X":
-                                 _loc27_ = uint(_loc5_.shift());
+                                 _loc27_ = uint(uint(_loc5_.shift()));
                                  if(_loc19_)
                                  {
                                     _loc27_ &= 65535;
@@ -305,15 +305,15 @@ package utils
                                  _loc9_ = _loc18_;
                                  if(_loc4_ == "x")
                                  {
-                                    _loc22_ = _loc27_.toString(16);
+                                    _loc22_ = String(_loc27_.toString(16));
                                  }
                                  else if(_loc4_ == "X")
                                  {
-                                    _loc22_ = _loc27_.toString(16).toUpperCase();
+                                    _loc22_ = String(_loc27_.toString(16).toUpperCase());
                                  }
                                  else
                                  {
-                                    _loc22_ = _loc27_.toString();
+                                    _loc22_ = String(_loc27_.toString());
                                  }
                                  if(_loc24_ != 0)
                                  {
@@ -361,14 +361,14 @@ package utils
                                  break;
                               case "e":
                               case "E":
-                                 _loc28_ = Number(_loc5_.shift());
+                                 _loc28_ = Number(Number(_loc5_.shift()));
                                  if(_loc24_ != 0)
                                  {
-                                    _loc22_ = _loc28_.toExponential(Math.min(_loc24_,20));
+                                    _loc22_ = String(_loc28_.toExponential(Math.min(_loc24_,20)));
                                  }
                                  else
                                  {
-                                    _loc22_ = _loc28_.toExponential(6);
+                                    _loc22_ = String(_loc28_.toExponential(6));
                                  }
                                  if(_loc13_)
                                  {
@@ -379,7 +379,7 @@ package utils
                                  }
                                  if(_loc4_ == "E")
                                  {
-                                    _loc22_ = _loc22_.toUpperCase();
+                                    _loc22_ = String(_loc22_.toUpperCase());
                                  }
                                  if(_loc23_ != 0)
                                  {
@@ -387,14 +387,14 @@ package utils
                                  }
                                  break;
                               case "f":
-                                 _loc29_ = Number(_loc5_.shift());
+                                 _loc29_ = Number(Number(_loc5_.shift()));
                                  if(_loc24_ != 0)
                                  {
-                                    _loc22_ = _loc29_.toPrecision(_loc24_);
+                                    _loc22_ = String(_loc29_.toPrecision(_loc24_));
                                  }
                                  else
                                  {
-                                    _loc22_ = _loc29_.toPrecision(6);
+                                    _loc22_ = String(_loc29_.toPrecision(6));
                                  }
                                  if(_loc13_)
                                  {
@@ -449,16 +449,16 @@ package utils
                                  {
                                     _loc32_ += "L";
                                  }
-                                 _loc33_ = Number(_loc5_.shift());
+                                 _loc33_ = Number(Number(_loc5_.shift()));
                                  _loc34_ = sprintf("%" + _loc30_ + _loc31_ + _loc32_ + "f",_loc33_);
                                  _loc35_ = sprintf("%" + _loc30_ + _loc31_ + _loc32_ + (_loc4_ == "G" ? "E" : "e"),_loc33_);
                                  _loc22_ = _loc34_.length < _loc35_.length ? _loc34_ : _loc35_;
                                  break;
                               case "s":
-                                 _loc22_ = String(_loc5_.shift());
+                                 _loc22_ = String(String(_loc5_.shift()));
                                  if(_loc24_ != 0)
                                  {
-                                    _loc22_ = _loc22_.substring(0,_loc24_);
+                                    _loc22_ = String(_loc22_.substring(0,_loc24_));
                                  }
                                  if(_loc23_ != 0)
                                  {
@@ -486,7 +486,7 @@ package utils
                      {
                         _loc21_ = true;
                      }
-                     _loc4_ = param1.charAt(++_loc6_);
+                     _loc4_ = String(param1.charAt(++_loc6_));
                   }
                }
             }
@@ -501,7 +501,7 @@ package utils
       
       private static function pad(param1:String, param2:int, param3:Boolean, param4:String) : String
       {
-         var _loc5_:int = param1.length;
+         var _loc5_:int = int(param1.length);
          if(param3)
          {
             while(_loc5_++ < param2)

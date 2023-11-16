@@ -134,11 +134,11 @@ package Playtomic
          if(param4.Success)
          {
             _loc7_ = (_loc6_ = XML(param3["level"]))["sdate"];
-            _loc8_ = int(_loc7_.substring(_loc7_.lastIndexOf("/") + 1));
+            _loc8_ = int(int(_loc7_.substring(_loc7_.lastIndexOf("/") + 1)));
             do
             {
-               _loc9_ = int(_loc7_.substring(0,_loc7_.indexOf("/")));
-               _loc10_ = int(_loc7_.substring(_loc7_.indexOf("/") + 1).substring(0,2));
+               _loc9_ = int(int(_loc7_.substring(0,_loc7_.indexOf("/"))));
+               _loc10_ = int(int(_loc7_.substring(_loc7_.indexOf("/") + 1).substring(0,2)));
             }
             while(false);
             
@@ -183,14 +183,14 @@ package Playtomic
          {
             param2 = new Object();
          }
-         var _loc3_:String = param2.hasOwnProperty("mode") ? String(param2["mode"]) : "popular";
-         var _loc4_:int = param2.hasOwnProperty("page") ? int(param2["page"]) : 1;
-         var _loc5_:int = param2.hasOwnProperty("perpage") ? int(param2["perpage"]) : 20;
-         var _loc6_:String = param2.hasOwnProperty("datemin") ? String(param2["datemin"]) : "";
-         var _loc7_:String = param2.hasOwnProperty("datemax") ? String(param2["datemax"]) : "";
-         var _loc8_:Boolean = param2.hasOwnProperty("data") ? Boolean(param2["data"]) : false;
-         var _loc9_:Boolean = param2.hasOwnProperty("thumbs") ? Boolean(param2["thumbs"]) : false;
-         var _loc10_:Object = param2.hasOwnProperty("customfilters") ? param2["customfilters"] : {};
+         var _loc3_:String = !!param2.hasOwnProperty("mode") ? String(param2["mode"]) : "popular";
+         var _loc4_:int = !!param2.hasOwnProperty("page") ? int(param2["page"]) : 1;
+         var _loc5_:int = !!param2.hasOwnProperty("perpage") ? int(param2["perpage"]) : 20;
+         var _loc6_:String = !!param2.hasOwnProperty("datemin") ? String(param2["datemin"]) : "";
+         var _loc7_:String = !!param2.hasOwnProperty("datemax") ? String(param2["datemax"]) : "";
+         var _loc8_:Boolean = !!param2.hasOwnProperty("data") ? Boolean(param2["data"]) : false;
+         var _loc9_:Boolean = !!param2.hasOwnProperty("thumbs") ? Boolean(param2["thumbs"]) : false;
+         var _loc10_:Object = !!param2.hasOwnProperty("customfilters") ? param2["customfilters"] : {};
          if(KongAPI != null)
          {
             if(_loc3_ == "popular")
@@ -259,11 +259,11 @@ package Playtomic
             for each(_loc13_ in _loc7_)
             {
                _loc9_ = String(_loc13_["sdate"]);
-               _loc10_ = int(_loc9_.substring(_loc9_.lastIndexOf("/") + 1));
+               _loc10_ = int(int(_loc9_.substring(_loc9_.lastIndexOf("/") + 1)));
                do
                {
-                  _loc11_ = int(_loc9_.substring(0,_loc9_.indexOf("/")));
-                  _loc12_ = int(_loc9_.substring(_loc9_.indexOf("/") + 1).substring(0,2));
+                  _loc11_ = int(int(_loc9_.substring(0,_loc9_.indexOf("/"))));
+                  _loc12_ = int(int(_loc9_.substring(_loc9_.indexOf("/") + 1).substring(0,2)));
                }
                while(false);
                
@@ -343,20 +343,20 @@ package Playtomic
          if(thumb != null)
          {
             scale = 1;
-            w = thumb.width;
-            h = thumb.height;
+            w = int(thumb.width);
+            h = int(thumb.height);
             if(thumb.width > 100 || thumb.height > 100)
             {
                if(thumb.width >= thumb.height)
                {
                   scale = 100 / thumb.width;
                   w = 100;
-                  h = Math.ceil(scale * thumb.height);
+                  h = int(Math.ceil(scale * thumb.height));
                }
                else if(thumb.height > thumb.width)
                {
                   scale = 100 / thumb.height;
-                  w = Math.ceil(scale * thumb.width);
+                  w = int(Math.ceil(scale * thumb.width));
                   h = 100;
                }
             }
@@ -428,7 +428,7 @@ package Playtomic
          {
             if(_loc6_.indexOf("ckey") == 0)
             {
-               _loc7_ = _loc6_.substring(4);
+               _loc7_ = String(_loc6_.substring(4));
                _loc8_ = String(param2["ckey" + _loc7_]);
                do
                {
@@ -476,7 +476,7 @@ package Playtomic
          {
             _loc3_ = Math.random() * param1.width;
             _loc4_ = Math.random() * param1.height;
-            _loc5_ = param1.getPixel32(_loc3_,_loc4_).toString(16);
+            _loc5_ = String(param1.getPixel32(_loc3_,_loc4_).toString(16));
             while(_loc5_.length < 6)
             {
                _loc5_ = "0" + _loc5_;

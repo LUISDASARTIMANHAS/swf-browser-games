@@ -46,7 +46,7 @@ package com.greensock.plugins
       
       override public function killProps(param1:Object) : void
       {
-         var _loc2_:int = int(this._colors.length - 1);
+         var _loc2_:int = this._colors.length - 1;
          while(_loc2_ > -1)
          {
             if(param1[this._colors[_loc2_][1]] != undefined)
@@ -62,7 +62,7 @@ package com.greensock.plugins
       {
          var _loc2_:int = 0;
          var _loc3_:Array = null;
-         _loc2_ = int(this._colors.length - 1);
+         _loc2_ = this._colors.length - 1;
          while(_loc2_ > -1)
          {
             _loc3_ = this._colors[_loc2_];

@@ -69,7 +69,7 @@ package org.flixel
       {
          if(param3 > this.nodes.length)
          {
-            param3 = this.nodes.length;
+            param3 = uint(this.nodes.length);
          }
          this.nodes.splice(param3,0,new FlxPoint(param1,param2));
       }
@@ -90,7 +90,7 @@ package org.flixel
       {
          if(param2 > this.nodes.length)
          {
-            param2 = this.nodes.length;
+            param2 = uint(this.nodes.length);
          }
          if(param3)
          {
@@ -104,7 +104,7 @@ package org.flixel
       
       public function remove(param1:FlxPoint) : FlxPoint
       {
-         var _loc2_:int = this.nodes.indexOf(param1);
+         var _loc2_:int = int(this.nodes.indexOf(param1));
          if(_loc2_ >= 0)
          {
             return this.nodes.splice(_loc2_,1);
@@ -161,7 +161,7 @@ package org.flixel
          var _loc2_:Graphics = FlxG.flashGfx;
          _loc2_.clear();
          var _loc5_:uint = 0;
-         var _loc6_:uint = this.nodes.length;
+         var _loc6_:uint = uint(this.nodes.length);
          while(_loc5_ < _loc6_)
          {
             _loc3_ = this.nodes[_loc5_] as FlxPoint;

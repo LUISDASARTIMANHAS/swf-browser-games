@@ -60,9 +60,9 @@ package Playtomic
          }
          var _loc5_:Object;
          (_loc5_ = new Object())["type"] = param2;
-         _loc5_["day"] = param4.hasOwnProperty("day") ? param4["day"] : 0;
-         _loc5_["month"] = param4.hasOwnProperty("month") ? param4["month"] : 0;
-         _loc5_["year"] = param4.hasOwnProperty("year") ? param4["year"] : 0;
+         _loc5_["day"] = !!param4.hasOwnProperty("day") ? param4["day"] : 0;
+         _loc5_["month"] = !!param4.hasOwnProperty("month") ? param4["month"] : 0;
+         _loc5_["year"] = !!param4.hasOwnProperty("year") ? param4["year"] : 0;
          PRequest.Load(SECTION,param1,GeneralComplete,param3,_loc5_);
       }
       
@@ -92,9 +92,9 @@ package Playtomic
          }
          var _loc4_:Object;
          (_loc4_ = new Object())["metric"] = param1;
-         _loc4_["day"] = param3.hasOwnProperty("day") ? param3["day"] : 0;
-         _loc4_["month"] = param3.hasOwnProperty("month") ? param3["month"] : 0;
-         _loc4_["year"] = param3.hasOwnProperty("year") ? param3["year"] : 0;
+         _loc4_["day"] = !!param3.hasOwnProperty("day") ? param3["day"] : 0;
+         _loc4_["month"] = !!param3.hasOwnProperty("month") ? param3["month"] : 0;
+         _loc4_["year"] = !!param3.hasOwnProperty("year") ? param3["year"] : 0;
          PRequest.Load(SECTION,CUSTOMMETRIC,CustomMetricComplete,param2,_loc4_);
       }
       
@@ -221,9 +221,9 @@ package Playtomic
          var _loc7_:Object;
          (_loc7_ = new Object())["metric"] = param2;
          _loc7_["level"] = param3;
-         _loc7_["day"] = param6.hasOwnProperty("day") ? param6["day"] : 0;
-         _loc7_["month"] = param6.hasOwnProperty("month") ? param6["month"] : 0;
-         _loc7_["year"] = param6.hasOwnProperty("year") ? param6["year"] : 0;
+         _loc7_["day"] = !!param6.hasOwnProperty("day") ? param6["day"] : 0;
+         _loc7_["month"] = !!param6.hasOwnProperty("month") ? param6["month"] : 0;
+         _loc7_["year"] = !!param6.hasOwnProperty("year") ? param6["year"] : 0;
          PRequest.Load(SECTION,param1,param4,param5,_loc7_);
       }
    }

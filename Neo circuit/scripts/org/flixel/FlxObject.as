@@ -444,7 +444,7 @@ package org.flixel
             cameras = FlxG.cameras;
          }
          var _loc2_:uint = 0;
-         var _loc3_:uint = cameras.length;
+         var _loc3_:uint = uint(cameras.length);
          while(_loc2_ < _loc3_)
          {
             _loc1_ = cameras[_loc2_++];
@@ -468,8 +468,8 @@ package org.flixel
          }
          var _loc2_:Number = this.x - int(param1.scroll.x * this.scrollFactor.x);
          var _loc3_:Number = this.y - int(param1.scroll.y * this.scrollFactor.y);
-         _loc2_ = int(_loc2_ + (_loc2_ > 0 ? 1e-7 : -1e-7));
-         _loc3_ = int(_loc3_ + (_loc3_ > 0 ? 1e-7 : -1e-7));
+         _loc2_ = Number(int(_loc2_ + (_loc2_ > 0 ? 1e-7 : -1e-7)));
+         _loc3_ = Number(int(_loc3_ + (_loc3_ > 0 ? 1e-7 : -1e-7)));
          var _loc4_:int = this.width != int(this.width) ? int(this.width) : int(this.width - 1);
          var _loc5_:int = this.height != int(this.height) ? int(this.height) : int(this.height - 1);
          var _loc6_:Graphics;

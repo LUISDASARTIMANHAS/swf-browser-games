@@ -14,7 +14,7 @@ package utils
       public static function ConvertFileToStringArray(param1:Class) : Array
       {
          var _loc2_:ByteArray = new param1() as ByteArray;
-         var _loc3_:String = _loc2_.readUTFBytes(_loc2_.length);
+         var _loc3_:String = String(_loc2_.readUTFBytes(_loc2_.length));
          return _loc3_.split("\n");
       }
       

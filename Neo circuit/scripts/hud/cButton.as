@@ -171,7 +171,7 @@ package hud
             this.buttonNormal.cameras = FlxG.cameras;
          }
          var _loc3_:uint = 0;
-         var _loc4_:uint = this.buttonNormal.cameras.length;
+         var _loc4_:uint = uint(this.buttonNormal.cameras.length);
          var _loc5_:Boolean = true;
          while(_loc3_ < _loc4_)
          {

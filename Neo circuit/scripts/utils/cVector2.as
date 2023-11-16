@@ -68,8 +68,8 @@ package utils
       
       public static function rotToHeading(param1:Number, param2:cVector2) : void
       {
-         var _loc3_:Number = Math.cos(param1);
-         var _loc4_:Number = Math.sin(param1);
+         var _loc3_:Number = Number(Math.cos(param1));
+         var _loc4_:Number = Number(Math.sin(param1));
          param2.x = _loc3_;
          param2.y = _loc4_;
       }
@@ -213,7 +213,7 @@ package utils
       
       public function toRotation() : Number
       {
-         var _loc1_:Number = Math.atan(this.y / this.x);
+         var _loc1_:Number = Number(Math.atan(this.y / this.x));
          if(this.y < 0 && this.x > 0)
          {
             return _loc1_;

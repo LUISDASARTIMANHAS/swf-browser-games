@@ -371,7 +371,7 @@ package
                   _loc7_ = int(_loc5_[1]) * cCPUData.MAX_UPGRADES + int(_loc5_[2]);
                   _loc6_ = cObjectManager.getInstance().cpuDataList[_loc7_];
                   _loc8_ = cObjectManager.getInstance().getFreeCPU();
-                  _loc9_ = int(_loc5_[4]);
+                  _loc9_ = int(int(_loc5_[4]));
                   _loc8_.init(_loc9_,this.m_cpuArray[_loc3_].x,this.m_cpuArray[_loc3_].y,int(_loc5_[3]),_loc6_,true);
                   if(_loc9_ > cCPU.PLAYER01)
                   {
@@ -467,7 +467,7 @@ package
       {
          var _loc2_:cCPU = null;
          var _loc3_:cCPU = null;
-         var _loc1_:int = int.MAX_VALUE;
+         var _loc1_:int = int(int.MAX_VALUE);
          var _loc4_:int = 0;
          while(_loc4_ < this.cpuList.length)
          {
@@ -486,7 +486,7 @@ package
       {
          var _loc2_:cCPU = null;
          var _loc3_:cCPU = null;
-         var _loc1_:int = int.MIN_VALUE;
+         var _loc1_:int = int(int.MIN_VALUE);
          var _loc4_:int = 0;
          while(_loc4_ < this.cpuList.length)
          {
@@ -505,7 +505,7 @@ package
       {
          var _loc2_:cCPU = null;
          var _loc3_:cCPU = null;
-         var _loc1_:int = int.MAX_VALUE;
+         var _loc1_:int = int(int.MAX_VALUE);
          var _loc4_:int = 0;
          while(_loc4_ < this.cpuList.length)
          {
@@ -524,7 +524,7 @@ package
       {
          var _loc2_:cCPU = null;
          var _loc3_:cCPU = null;
-         var _loc1_:int = int.MIN_VALUE;
+         var _loc1_:int = int(int.MIN_VALUE);
          var _loc4_:int = 0;
          while(_loc4_ < this.cpuList.length)
          {

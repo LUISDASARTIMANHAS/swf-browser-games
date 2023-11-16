@@ -235,7 +235,7 @@ package org.flixel.system.debug
          var _loc3_:ByteArray = this._file.data;
          if(_loc3_ != null)
          {
-            _loc2_ = _loc3_.readUTFBytes(_loc3_.bytesAvailable);
+            _loc2_ = String(_loc3_.readUTFBytes(_loc3_.bytesAvailable));
          }
          this._file = null;
          if(_loc2_ == null || _loc2_.length <= 0)

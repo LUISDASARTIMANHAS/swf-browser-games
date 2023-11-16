@@ -59,10 +59,10 @@ package com.greensock.core
          super();
          this.vars = param2 != null ? param2 : {};
          this.cachedDuration = this.cachedTotalDuration = param1;
-         this._delay = !!this.vars.delay ? Number(this.vars.delay) : 0;
+         this._delay = !!this.vars.delay ? Number(Number(this.vars.delay)) : 0;
          do
          {
-            this.cachedTimeScale = !!this.vars.timeScale ? Number(this.vars.timeScale) : 1;
+            this.cachedTimeScale = !!this.vars.timeScale ? Number(Number(this.vars.timeScale)) : 1;
             this.active = Boolean(param1 == 0 && this._delay == 0 && this.vars.immediateRender != false);
          }
          while(false);
@@ -286,7 +286,7 @@ package com.greensock.core
       
       public function set startTime(param1:Number) : void
       {
-         var _loc2_:Boolean = Boolean(this.timeline != null && (param1 != this.cachedStartTime || this.gc));
+         var _loc2_:Boolean = Boolean(Boolean(this.timeline != null && (param1 != this.cachedStartTime || this.gc)));
          this.cachedStartTime = param1;
          if(_loc2_)
          {

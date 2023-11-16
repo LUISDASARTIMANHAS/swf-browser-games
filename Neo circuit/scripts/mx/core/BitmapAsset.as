@@ -120,7 +120,7 @@ package mx.core
          {
             _loc1_ = MatrixUtilClass["transformSize"](this.layoutFeatures.layoutWidth,this._height,transform.matrix);
          }
-         return !!_loc1_ ? _loc1_.x : super.width;
+         return !!_loc1_ ? Number(_loc1_.x) : super.width;
       }
       
       override public function set width(param1:Number) : void
@@ -152,7 +152,7 @@ package mx.core
          {
             _loc1_ = MatrixUtilClass["transformSize"](this.layoutFeatures.layoutWidth,this._height,transform.matrix);
          }
-         return !!_loc1_ ? _loc1_.y : super.height;
+         return !!_loc1_ ? Number(_loc1_.y) : super.height;
       }
       
       override public function set height(param1:Number) : void

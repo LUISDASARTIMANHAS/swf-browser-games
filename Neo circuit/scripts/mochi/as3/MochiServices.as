@@ -142,7 +142,7 @@ package mochi.as3
       
       public static function warnID(param1:String, param2:Boolean) : void
       {
-         param1 = param1.toLowerCase();
+         param1 = String(param1.toLowerCase());
          if(param1.length != 16)
          {
             return;
@@ -864,7 +864,7 @@ package mochi.as3
          while(false);
          
          var _loc12_:uint;
-         var _loc13_:uint = uint((_loc12_ = uint(_loc3_.length + _loc11_.length + 4)) + 35);
+         var _loc13_:uint = uint((_loc12_ = _loc3_.length + _loc11_.length + 4) + 35);
          _loc10_.endian = Endian.LITTLE_ENDIAN;
          _loc10_.writeUTFBytes("FWS");
          do

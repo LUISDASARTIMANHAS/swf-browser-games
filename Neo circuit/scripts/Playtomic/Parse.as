@@ -194,12 +194,12 @@ package Playtomic
          var _loc2_:Array = param1.split(" ");
          var _loc3_:Array = (_loc2_[0] as String).split("/");
          var _loc4_:Array = (_loc2_[1] as String).split(":");
-         var _loc5_:int = int(_loc3_[1]);
-         var _loc6_:int = int(_loc3_[0]);
-         var _loc7_:int = int(_loc3_[2]);
-         var _loc8_:int = int(_loc4_[0]);
-         var _loc9_:int = int(_loc4_[1]);
-         var _loc10_:int = int(_loc4_[2]);
+         var _loc5_:int = int(int(_loc3_[1]));
+         var _loc6_:int = int(int(_loc3_[0]));
+         var _loc7_:int = int(int(_loc3_[2]));
+         var _loc8_:int = int(int(_loc4_[0]));
+         var _loc9_:int = int(int(_loc4_[1]));
+         var _loc10_:int = int(int(_loc4_[2]));
          return new Date(Date.UTC(_loc7_,_loc6_,_loc5_,_loc8_,_loc9_,_loc10_));
       }
    }

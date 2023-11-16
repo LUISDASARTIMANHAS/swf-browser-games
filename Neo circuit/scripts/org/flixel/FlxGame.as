@@ -129,7 +129,7 @@ package org.flixel
          }
          while(false);
          
-         var _loc2_:uint = Math.round(FlxG.volume * 10);
+         var _loc2_:uint = uint(Math.round(FlxG.volume * 10));
          if(FlxG.mute)
          {
             _loc2_ = 0;
@@ -176,7 +176,7 @@ package org.flixel
             if(this.useSoundHotKeys)
             {
                _loc2_ = int(param1.keyCode);
-               _loc3_ = String.fromCharCode(param1.charCode);
+               _loc3_ = String(String.fromCharCode(param1.charCode));
                switch(_loc2_)
                {
                   case 48:
@@ -224,7 +224,7 @@ package org.flixel
          {
             _loc2_ = false;
             _loc4_ = 0;
-            _loc5_ = this._replayCancelKeys.length;
+            _loc5_ = uint(this._replayCancelKeys.length);
             while(_loc4_ < _loc5_)
             {
                _loc3_ = String(this._replayCancelKeys[_loc4_++]);
@@ -266,10 +266,10 @@ package org.flixel
          if(this._replaying && this._replayCancelKeys != null)
          {
             _loc3_ = 0;
-            _loc4_ = this._replayCancelKeys.length;
+            _loc4_ = uint(this._replayCancelKeys.length);
             while(_loc3_ < _loc4_)
             {
-               _loc2_ = this._replayCancelKeys[_loc3_++] as String;
+               _loc2_ = String(this._replayCancelKeys[_loc3_++] as String);
                if(_loc2_ == "MOUSE" || _loc2_ == "ANY")
                {
                   if(this._replayCallback != null)

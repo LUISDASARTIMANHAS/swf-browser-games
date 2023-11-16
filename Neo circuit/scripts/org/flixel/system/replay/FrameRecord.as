@@ -43,7 +43,7 @@ package org.flixel.system.replay
             _loc3_ = 0;
             while(true)
             {
-               _loc4_ = this.keys.length;
+               _loc4_ = uint(this.keys.length);
                while(true)
                {
                   if(_loc3_ < _loc4_)
@@ -82,7 +82,7 @@ package org.flixel.system.replay
          {
             _loc4_ = _loc5_.split(",");
             _loc2_ = 0;
-            _loc3_ = _loc4_.length;
+            _loc3_ = uint(_loc4_.length);
             while(_loc2_ < _loc3_)
             {
                if((_loc7_ = (_loc4_[_loc2_++] as String).split(":")).length == 2)

@@ -91,26 +91,26 @@ package
       public function NeoCircuit()
       {
          var _loc1_:Class = cMenuState;
-         var _loc2_:Number = Capabilities.screenResolutionX;
-         var _loc3_:Number = Capabilities.screenResolutionY;
+         var _loc2_:Number = Number(Capabilities.screenResolutionX);
+         var _loc3_:Number = Number(Capabilities.screenResolutionY);
          mobileRelease = true;
          if(_loc2_ == IPAD_SCREEN_RESX && _loc3_ == IPAD_SCREEN_RESY && Capabilities.os.indexOf("iPad") != -1)
          {
             device = DEVICEID_IPAD;
-            _loc2_ = Capabilities.screenResolutionY;
-            _loc3_ = Capabilities.screenResolutionX;
+            _loc2_ = Number(Capabilities.screenResolutionY);
+            _loc3_ = Number(Capabilities.screenResolutionX);
          }
          else if(_loc2_ == IPHONE4_SCREEN_RESX && _loc3_ == IPHONE4_SCREEN_RESY && Capabilities.os.indexOf("iPhone") != -1)
          {
             device = DEVICEID_IPHONE4;
-            _loc2_ = Capabilities.screenResolutionY;
-            _loc3_ = Capabilities.screenResolutionX;
+            _loc2_ = Number(Capabilities.screenResolutionY);
+            _loc3_ = Number(Capabilities.screenResolutionX);
          }
          else if(_loc2_ <= MIN_SCREEN_RESX && _loc3_ <= MIN_SCREEN_RESY && Boolean(Capabilities.manufacturer.indexOf("Android")))
          {
             device = DEVICEID_ANDROID;
-            _loc2_ = Capabilities.screenResolutionY;
-            _loc3_ = Capabilities.screenResolutionX;
+            _loc2_ = Number(Capabilities.screenResolutionY);
+            _loc3_ = Number(Capabilities.screenResolutionX);
          }
          else
          {

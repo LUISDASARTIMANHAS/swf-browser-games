@@ -45,7 +45,7 @@ package Playtomic
             _loc4_[1] = (_loc3_[0] & 3) << 4 | _loc3_[1] >> 4;
             _loc4_[2] = (_loc3_[1] & 15) << 2 | _loc3_[2] >> 6;
             _loc4_[3] = _loc3_[2] & 63;
-            _loc6_ = _loc3_.length;
+            _loc6_ = uint(_loc3_.length);
             while(_loc6_ < 3)
             {
                _loc4_[_loc6_ + 1] = 64;
@@ -81,7 +81,7 @@ package Playtomic
          var _loc6_:int = 0;
          var _loc7_:int = 0;
          var _loc8_:ByteArray = null;
-         _loc7_ = param1.length;
+         _loc7_ = int(param1.length);
          _loc6_ = 0;
          _loc8_ = new ByteArray();
          loop0:
@@ -167,7 +167,7 @@ package Playtomic
                _loc6_ = 0;
                while(_loc6_ < param1.width)
                {
-                  _loc5_ = param1.getPixel(_loc6_,_loc7_);
+                  _loc5_ = uint(param1.getPixel(_loc6_,_loc7_));
                   _loc4_.writeUnsignedInt(uint((_loc5_ & 16777215) << 8 | 255));
                   _loc6_++;
                }
@@ -177,7 +177,7 @@ package Playtomic
                _loc6_ = 0;
                while(_loc6_ < param1.width)
                {
-                  _loc5_ = param1.getPixel32(_loc6_,_loc7_);
+                  _loc5_ = uint(param1.getPixel32(_loc6_,_loc7_));
                   _loc4_.writeUnsignedInt(uint((_loc5_ & 16777215) << 8 | _loc5_ >>> 24));
                   _loc6_++;
                }
@@ -219,11 +219,11 @@ package Playtomic
                   {
                      if(_loc8_ & 1)
                      {
-                        _loc8_ = uint(uint(3988292384) ^ uint(_loc8_ >>> 1));
+                        _loc8_ = uint(uint(uint(3988292384) ^ uint(_loc8_ >>> 1)));
                      }
                      else
                      {
-                        _loc8_ = uint(_loc8_ >>> 1);
+                        _loc8_ = uint(uint(_loc8_ >>> 1));
                      }
                      _loc10_++;
                   }
@@ -233,25 +233,25 @@ package Playtomic
          var _loc4_:uint = 0;
          if(param3 != null)
          {
-            _loc4_ = param3.length;
+            _loc4_ = uint(param3.length);
          }
          param1.writeUnsignedInt(_loc4_);
-         var _loc5_:uint = param1.position;
+         var _loc5_:uint = uint(param1.position);
          param1.writeUnsignedInt(param2);
          if(param3 != null)
          {
             param1.writeBytes(param3);
          }
-         var _loc6_:uint = param1.position;
+         var _loc6_:uint = uint(param1.position);
          param1.position = _loc5_;
          _loc8_ = 4294967295;
          var _loc7_:int = 0;
          while(_loc7_ < _loc6_ - _loc5_)
          {
-            _loc8_ = uint(crcTable[(_loc8_ ^ param1.readUnsignedByte()) & uint(255)] ^ uint(_loc8_ >>> 8));
+            _loc8_ = uint(uint(crcTable[(_loc8_ ^ param1.readUnsignedByte()) & uint(255)] ^ uint(_loc8_ >>> 8)));
             _loc7_++;
          }
-         _loc8_ = uint(_loc8_ ^ uint(4294967295));
+         _loc8_ = uint(uint(_loc8_ ^ uint(4294967295)));
          param1.position = _loc6_;
          param1.writeUnsignedInt(_loc8_);
       }

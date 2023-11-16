@@ -215,7 +215,7 @@ package org.flixel
          var _loc2_:uint = 0;
          if(param1 != null)
          {
-            _loc2_ = param1.length;
+            _loc2_ = uint(param1.length);
             if(_loc2_ > 0)
             {
                return param1[uint(FlxG.random() * _loc2_)];
@@ -399,7 +399,7 @@ package org.flixel
          }
          addr43:
          var _loc2_:uint = 0;
-         var _loc4_:uint = sounds.members.length;
+         var _loc4_:uint = uint(sounds.members.length);
          while(_loc2_ < _loc4_)
          {
             _loc3_ = sounds.members[_loc2_++] as FlxSound;
@@ -460,7 +460,7 @@ package org.flixel
             §§goto(addr23);
          }
          var _loc1_:uint = 0;
-         var _loc3_:uint = sounds.members.length;
+         var _loc3_:uint = uint(sounds.members.length);
          while(_loc1_ < _loc3_)
          {
             _loc2_ = sounds.members[_loc1_++] as FlxSound;
@@ -494,7 +494,7 @@ package org.flixel
             music.play();
          }
          var _loc1_:uint = 0;
-         var _loc3_:uint = sounds.members.length;
+         var _loc3_:uint = uint(sounds.members.length);
          while(_loc1_ < _loc3_)
          {
             _loc2_ = sounds.members[_loc1_++] as FlxSound;
@@ -545,7 +545,7 @@ package org.flixel
          var _loc5_:Boolean = false;
          if(param4 == null)
          {
-            param4 = String(param1) + (param2 ? "_REVERSE_" : "");
+            param4 = String(String(param1) + (param2 ? "_REVERSE_" : ""));
             if(param3 && checkBitmapCache(param4))
             {
                _loc7_ = 0;
@@ -653,7 +653,7 @@ package org.flixel
       {
          var _loc2_:FlxCamera = null;
          var _loc3_:uint = 0;
-         var _loc4_:uint = cameras.length;
+         var _loc4_:uint = uint(cameras.length);
          while(_loc3_ < _loc4_)
          {
             _loc2_ = FlxG.cameras[_loc3_++] as FlxCamera;
@@ -671,7 +671,7 @@ package org.flixel
       public static function flash(param1:uint = 4294967295, param2:Number = 1, param3:Function = null, param4:Boolean = false) : void
       {
          var _loc5_:uint = 0;
-         var _loc6_:uint = FlxG.cameras.length;
+         var _loc6_:uint = uint(FlxG.cameras.length);
          while(_loc5_ < _loc6_)
          {
             (FlxG.cameras[_loc5_++] as FlxCamera).flash(param1,param2,param3,param4);
@@ -681,7 +681,7 @@ package org.flixel
       public static function fade(param1:uint = 4294967295, param2:Number = 1, param3:Function = null, param4:Boolean = false) : void
       {
          var _loc5_:uint = 0;
-         var _loc6_:uint = FlxG.cameras.length;
+         var _loc6_:uint = uint(FlxG.cameras.length);
          while(_loc5_ < _loc6_)
          {
             (FlxG.cameras[_loc5_++] as FlxCamera).fade(param1,param2,param3,param4);
@@ -691,7 +691,7 @@ package org.flixel
       public static function shake(param1:Number = 0.05, param2:Number = 0.5, param3:Function = null, param4:Boolean = true, param5:uint = 0) : void
       {
          var _loc6_:uint = 0;
-         var _loc7_:uint = FlxG.cameras.length;
+         var _loc7_:uint = uint(FlxG.cameras.length);
          while(_loc6_ < _loc7_)
          {
             (FlxG.cameras[_loc6_++] as FlxCamera).shake(param1,param2,param3,param4,param5);
@@ -710,7 +710,7 @@ package org.flixel
       public static function set bgColor(param1:uint) : void
       {
          var _loc2_:uint = 0;
-         var _loc3_:uint = FlxG.cameras.length;
+         var _loc3_:uint = uint(FlxG.cameras.length);
          while(_loc2_ < _loc3_)
          {
             (FlxG.cameras[_loc2_++] as FlxCamera).bgColor = param1;
@@ -744,7 +744,7 @@ package org.flixel
       {
          var _loc2_:Array = FlxG.plugins;
          var _loc3_:uint = 0;
-         var _loc4_:uint = _loc2_.length;
+         var _loc4_:uint = uint(_loc2_.length);
          while(_loc3_ < _loc4_)
          {
             if(_loc2_[_loc3_++].toString() == param1.toString())
@@ -760,7 +760,7 @@ package org.flixel
       {
          var _loc2_:Array = FlxG.plugins;
          var _loc3_:uint = 0;
-         var _loc4_:uint = _loc2_.length;
+         var _loc4_:uint = uint(_loc2_.length);
          while(_loc3_ < _loc4_)
          {
             if(_loc2_[_loc3_++] is param1)
@@ -775,7 +775,7 @@ package org.flixel
       public static function removePlugin(param1:FlxBasic) : FlxBasic
       {
          var _loc2_:Array = FlxG.plugins;
-         var _loc3_:int = int(_loc2_.length - 1);
+         var _loc3_:int = _loc2_.length - 1;
          while(_loc3_ >= 0)
          {
             if(_loc2_[_loc3_] == param1)
@@ -791,7 +791,7 @@ package org.flixel
       {
          var _loc2_:Boolean = false;
          var _loc3_:Array = FlxG.plugins;
-         var _loc4_:int = int(_loc3_.length - 1);
+         var _loc4_:int = _loc3_.length - 1;
          while(_loc4_ >= 0)
          {
             if(_loc3_[_loc4_] is param1)
@@ -875,7 +875,7 @@ package org.flixel
          var _loc1_:FlxCamera = null;
          var _loc2_:Array = FlxG.cameras;
          var _loc3_:uint = 0;
-         var _loc4_:uint = _loc2_.length;
+         var _loc4_:uint = uint(_loc2_.length);
          while(_loc3_ < _loc4_)
          {
             _loc1_ = _loc2_[_loc3_++] as FlxCamera;
@@ -901,7 +901,7 @@ package org.flixel
          var _loc1_:FlxCamera = null;
          var _loc2_:Array = FlxG.cameras;
          var _loc3_:uint = 0;
-         var _loc4_:uint = _loc2_.length;
+         var _loc4_:uint = uint(_loc2_.length);
          loop0:
          while(_loc3_ < _loc4_)
          {
@@ -938,7 +938,7 @@ package org.flixel
          var _loc1_:FlxCamera = null;
          var _loc2_:Array = FlxG.cameras;
          var _loc3_:uint = 0;
-         var _loc4_:uint = _loc2_.length;
+         var _loc4_:uint = uint(_loc2_.length);
          while(_loc3_ < _loc4_)
          {
             _loc1_ = _loc2_[_loc3_++] as FlxCamera;
@@ -965,7 +965,7 @@ package org.flixel
          var _loc1_:FlxBasic = null;
          var _loc2_:Array = FlxG.plugins;
          var _loc3_:uint = 0;
-         var _loc4_:uint = _loc2_.length;
+         var _loc4_:uint = uint(_loc2_.length);
          while(_loc3_ < _loc4_)
          {
             _loc1_ = _loc2_[_loc3_++] as FlxBasic;
@@ -981,7 +981,7 @@ package org.flixel
          var _loc1_:FlxBasic = null;
          var _loc2_:Array = FlxG.plugins;
          var _loc3_:uint = 0;
-         var _loc4_:uint = _loc2_.length;
+         var _loc4_:uint = uint(_loc2_.length);
          while(_loc3_ < _loc4_)
          {
             _loc1_ = _loc2_[_loc3_++] as FlxBasic;

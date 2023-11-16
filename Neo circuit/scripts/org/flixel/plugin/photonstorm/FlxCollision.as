@@ -46,7 +46,7 @@ package org.flixel.plugin.photonstorm
          while(false);
          
          var _loc3_:Rectangle = boundsA.intersection(boundsB);
-         if(_loc3_.isEmpty() || _loc3_.width == 0 || _loc3_.height == 0)
+         if(Boolean(_loc3_.isEmpty()) || _loc3_.width == 0 || _loc3_.height == 0)
          {
             return false;
          }

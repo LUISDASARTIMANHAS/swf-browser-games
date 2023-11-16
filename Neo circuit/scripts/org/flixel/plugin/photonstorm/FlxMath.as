@@ -213,9 +213,9 @@ package org.flixel.plugin.photonstorm
       public static function wrapValue(param1:int, param2:int, param3:int) : int
       {
          var _loc4_:int = 0;
-         param1 = Math.abs(param1);
-         param2 = Math.abs(param2);
-         param3 = Math.abs(param3);
+         param1 = int(Math.abs(param1));
+         param2 = int(Math.abs(param2));
+         param3 = int(Math.abs(param3));
          return int((param1 + param2) % param3);
       }
       

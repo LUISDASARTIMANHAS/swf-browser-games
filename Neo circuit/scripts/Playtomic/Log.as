@@ -505,11 +505,11 @@ package Playtomic
       {
          while(param1.indexOf("/") > -1)
          {
-            param1 = param1.replace("/","\\");
+            param1 = String(param1.replace("/","\\"));
          }
          while(param1.indexOf("~") > -1)
          {
-            param1 = param1.replace("~","-");
+            param1 = String(param1.replace("~","-"));
          }
          return escape(param1);
       }
@@ -564,7 +564,7 @@ package Playtomic
          {
             try
             {
-               url = String(ExternalInterface.call("window.location.href.toString"));
+               url = String(String(ExternalInterface.call("window.location.href.toString")));
             }
             catch(s:Error)
             {

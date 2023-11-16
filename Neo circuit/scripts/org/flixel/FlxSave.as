@@ -87,7 +87,7 @@ package org.flixel
          
          try
          {
-            result = this._sharedObject.flush(MinFileSize);
+            result = String(this._sharedObject.flush(MinFileSize));
          }
          catch(e:Error)
          {

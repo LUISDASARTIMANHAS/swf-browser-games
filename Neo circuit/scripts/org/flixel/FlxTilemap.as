@@ -154,7 +154,7 @@ package org.flixel
             _loc5_ = 0;
             while(_loc5_ < _loc8_)
             {
-               _loc6_ = param1.getPixel(_loc5_,_loc4_);
+               _loc6_ = uint(param1.getPixel(_loc5_,_loc4_));
                if(param2 && _loc6_ > 0 || !param2 && _loc6_ == 0)
                {
                   _loc6_ = 1;
@@ -201,14 +201,14 @@ package org.flixel
          while(false);
          
          var _loc1_:uint = 0;
-         var _loc2_:uint = this._tileObjects.length;
+         var _loc2_:uint = uint(this._tileObjects.length);
          while(_loc1_ < _loc2_)
          {
             (this._tileObjects[_loc1_++] as FlxTile).destroy();
          }
          this._tileObjects = null;
          _loc1_ = 0;
-         _loc2_ = this._buffers.length;
+         _loc2_ = uint(this._buffers.length);
          while(_loc1_ < _loc2_)
          {
             (this._buffers[_loc1_++] as FlxTilemapBuffer).destroy();
@@ -467,7 +467,7 @@ package org.flixel
             §§goto(addr26);
          }
          var _loc3_:uint = 0;
-         var _loc4_:uint = cameras.length;
+         var _loc4_:uint = uint(cameras.length);
          while(_loc3_ < _loc4_)
          {
             _loc1_ = cameras[_loc3_];
@@ -512,7 +512,7 @@ package org.flixel
             return this._data;
          }
          var _loc2_:uint = 0;
-         var _loc3_:uint = this._data.length;
+         var _loc3_:uint = uint(this._data.length);
          var _loc4_:Array = new Array(_loc3_);
          while(_loc2_ < _loc3_)
          {
@@ -525,7 +525,7 @@ package org.flixel
       public function setDirty(param1:Boolean = true) : void
       {
          var _loc2_:uint = 0;
-         var _loc3_:uint = this._buffers.length;
+         var _loc3_:uint = uint(this._buffers.length);
          while(_loc2_ < _loc3_)
          {
             (this._buffers[_loc2_++] as FlxTilemapBuffer).dirty = param1;
@@ -567,7 +567,7 @@ package org.flixel
          while(false);
          
          var _loc10_:FlxPath = new FlxPath();
-         var _loc11_:int = int(_loc8_.length - 1);
+         var _loc11_:int = _loc8_.length - 1;
          while(_loc11_ >= 0)
          {
             if((_loc9_ = _loc8_[_loc11_--] as FlxPoint) != null)
@@ -626,7 +626,7 @@ package org.flixel
          var _loc2_:FlxPoint = param1[0];
          var _loc3_:int = -1;
          var _loc5_:uint = 1;
-         var _loc6_:uint = param1.length;
+         var _loc6_:uint = uint(param1.length);
          while(_loc5_ < _loc6_)
          {
             if((_loc4_ = param1[_loc5_++]) != null)
@@ -692,7 +692,7 @@ package org.flixel
             _loc8_ = _loc7_;
             _loc7_ = new Array();
             _loc5_ = 0;
-            _loc14_ = _loc8_.length;
+            _loc14_ = uint(_loc8_.length);
             while(true)
             {
                if(_loc5_ < _loc14_)
@@ -1158,8 +1158,8 @@ package org.flixel
          _loc5_ /= param4;
          var _loc6_:Number = param2.x - param1.x;
          var _loc7_:Number = param2.y - param1.y;
-         var _loc8_:Number = Math.sqrt(_loc6_ * _loc6_ + _loc7_ * _loc7_);
-         var _loc9_:uint = Math.ceil(_loc8_ / _loc5_);
+         var _loc8_:Number = Number(Math.sqrt(_loc6_ * _loc6_ + _loc7_ * _loc7_));
+         var _loc9_:uint = uint(Math.ceil(_loc8_ / _loc5_));
          var _loc10_:Number = _loc6_ / _loc9_;
          var _loc11_:Number = _loc7_ / _loc9_;
          var _loc12_:Number = param1.x - _loc10_ - x;

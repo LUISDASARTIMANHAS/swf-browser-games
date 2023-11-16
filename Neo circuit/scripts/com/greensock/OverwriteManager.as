@@ -54,7 +54,7 @@ package com.greensock
          var _loc18_:SimpleTimeline = null;
          if(param4 >= 4)
          {
-            _loc13_ = param3.length;
+            _loc13_ = uint(param3.length);
             _loc5_ = 0;
             while(_loc5_ < _loc13_)
             {

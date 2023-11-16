@@ -22,7 +22,7 @@ package com.greensock.plugins
       
       override public function onInitTween(param1:Object, param2:*, param3:TweenLite) : Boolean
       {
-         if(isNaN(param2) || param1.hasOwnProperty("volume") || !param1.hasOwnProperty("soundTransform"))
+         if(Boolean(isNaN(param2)) || Boolean(param1.hasOwnProperty("volume")) || !param1.hasOwnProperty("soundTransform"))
          {
             return false;
          }

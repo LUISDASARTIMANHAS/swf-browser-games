@@ -58,8 +58,8 @@ package
             {
                return true;
             }
-            _loc4_ = new String("");
-            _loc5_ = new String("");
+            _loc4_ = String(new String(""));
+            _loc5_ = String(new String(""));
             _loc4_ = "***********************************************************\n " + "ASSERT FAILED!!\n " + param2 + "\n" + param3 + "\n" + GetStackTrace() + "\n" + "***********************************************************\n ";
             if(m_asserts == null)
             {
@@ -165,11 +165,11 @@ package
          var _loc6_:String = null;
          var _loc2_:Array = param1.split("\n");
          var _loc3_:RegExp = /\w:[\\\/]([\w-]+[\\\/])*\w+.as/ig;
-         var _loc4_:* = new String("\n");
+         var _loc4_:* = String(new String("\n"));
          var _loc5_:int = 0;
          while(_loc5_ < _loc2_.length)
          {
-            _loc6_ = (_loc6_ = (_loc6_ = String(_loc2_[_loc5_])).replace(_loc3_,"")).replace("[:"," [line:");
+            _loc6_ = String((_loc6_ = String((_loc6_ = String(_loc2_[_loc5_])).replace(_loc3_,""))).replace("[:"," [line:"));
             _loc4_ = _loc4_ + _loc6_ + "\n";
             _loc5_++;
          }
@@ -206,7 +206,7 @@ package
       public static function CountDisplayObjects(param1:DisplayObjectContainer, param2:Boolean = true) : int
       {
          var _loc5_:DisplayObject = null;
-         var _loc3_:int = param1.numChildren;
+         var _loc3_:int = int(param1.numChildren);
          var _loc4_:int = 0;
          var _loc6_:int = 0;
          while(_loc6_ < _loc3_)
@@ -270,8 +270,8 @@ package
          var _loc4_:int = 0;
          while(_loc4_ < param1.length)
          {
-            _loc5_ = param1.charAt(_loc4_);
-            if((_loc6_ = _loc2_.indexOf(_loc5_)) < 0)
+            _loc5_ = String(param1.charAt(_loc4_));
+            if((_loc6_ = int(_loc2_.indexOf(_loc5_))) < 0)
             {
                _loc3_ += "-";
             }

@@ -23,7 +23,7 @@ package com.greensock.plugins
       
       override public function onInitTween(param1:Object, param2:*, param3:TweenLite) : Boolean
       {
-         if(!(param1 is MovieClip) || isNaN(param2))
+         if(!(param1 is MovieClip) || Boolean(isNaN(param2)))
          {
             return false;
          }

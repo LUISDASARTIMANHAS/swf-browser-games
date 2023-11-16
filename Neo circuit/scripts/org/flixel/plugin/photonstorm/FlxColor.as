@@ -87,7 +87,7 @@ package org.flixel.plugin.photonstorm
          var _loc2_:Object = getRGB(param1);
          var _loc3_:Object = RGBtoHSV(param1);
          var _loc4_:*;
-         return (_loc4_ = (_loc4_ = RGBtoHexString(param1) + "\n").concat("Alpha: " + _loc2_.alpha + " Red: " + _loc2_.red + " Green: " + _loc2_.green + " Blue: " + _loc2_.blue) + "\n").concat("Hue: " + _loc3_.hue + " Saturation: " + _loc3_.saturation + " Lightnes: " + _loc3_.lightness);
+         return String((_loc4_ = (_loc4_ = RGBtoHexString(param1) + "\n").concat("Alpha: " + _loc2_.alpha + " Red: " + _loc2_.red + " Green: " + _loc2_.green + " Blue: " + _loc2_.blue) + "\n").concat("Hue: " + _loc3_.hue + " Saturation: " + _loc3_.saturation + " Lightnes: " + _loc3_.lightness));
       }
       
       public static function RGBtoHexString(param1:uint) : String
@@ -101,7 +101,7 @@ package org.flixel.plugin.photonstorm
          var _loc2_:String = "0123456789ABCDEF";
          var _loc3_:Number = param1 % 16;
          var _loc4_:Number = (param1 - _loc3_) / 16;
-         return _loc2_.charAt(_loc4_) + _loc2_.charAt(_loc3_);
+         return String(_loc2_.charAt(_loc4_) + _loc2_.charAt(_loc3_));
       }
       
       public static function HSVtoRGB(param1:Number, param2:Number, param3:Number, param4:uint = 255) : uint
@@ -166,9 +166,9 @@ package org.flixel.plugin.photonstorm
          var _loc3_:Number = _loc2_.red / 255;
          var _loc4_:Number = _loc2_.green / 255;
          var _loc5_:Number = _loc2_.blue / 255;
-         var _loc6_:Number = Math.min(_loc3_,_loc4_,_loc5_);
+         var _loc6_:Number = Number(Math.min(_loc3_,_loc4_,_loc5_));
          var _loc7_:Number;
-         var _loc8_:Number = (_loc7_ = Math.max(_loc3_,_loc4_,_loc5_)) - _loc6_;
+         var _loc8_:Number = (_loc7_ = Number(Math.max(_loc3_,_loc4_,_loc5_))) - _loc6_;
          var _loc9_:Number = (_loc7_ + _loc6_) / 2;
          if(_loc8_ == 0)
          {
@@ -210,7 +210,7 @@ package org.flixel.plugin.photonstorm
             }
          }
          _loc10_ *= 360;
-         _loc10_ = Math.round(_loc10_);
+         _loc10_ = Number(Math.round(_loc10_));
          return {
             "hue":_loc10_,
             "saturation":_loc11_,
@@ -258,9 +258,9 @@ package org.flixel.plugin.photonstorm
             FlxG.log("FlxColor Warning: getRandomColor - min value higher than max");
             return getColor24(255,255,255);
          }
-         var _loc4_:uint = uint(param1 + int(Math.random() * (param2 - param1)));
-         var _loc5_:uint = uint(param1 + int(Math.random() * (param2 - param1)));
-         var _loc6_:uint = uint(param1 + int(Math.random() * (param2 - param1)));
+         var _loc4_:uint = param1 + int(Math.random() * (param2 - param1));
+         var _loc5_:uint = param1 + int(Math.random() * (param2 - param1));
+         var _loc6_:uint = param1 + int(Math.random() * (param2 - param1));
          return getColor32(param3,_loc4_,_loc5_,_loc6_);
       }
       

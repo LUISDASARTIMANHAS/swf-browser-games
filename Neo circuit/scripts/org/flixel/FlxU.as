@@ -36,19 +36,19 @@ package org.flixel
       
       public static function floor(param1:Number) : Number
       {
-         var _loc2_:Number = int(param1);
+         var _loc2_:Number = Number(int(param1));
          return param1 > 0 ? _loc2_ : (_loc2_ != param1 ? _loc2_ - 1 : _loc2_);
       }
       
       public static function ceil(param1:Number) : Number
       {
-         var _loc2_:Number = int(param1);
+         var _loc2_:Number = Number(int(param1));
          return param1 > 0 ? (_loc2_ != param1 ? _loc2_ + 1 : _loc2_) : _loc2_;
       }
       
       public static function round(param1:Number) : Number
       {
-         var _loc2_:Number = int(param1 + (param1 > 0 ? 0.5 : -0.5));
+         var _loc2_:Number = Number(int(param1 + (param1 > 0 ? 0.5 : -0.5)));
          return param1 > 0 ? _loc2_ : (_loc2_ != param1 ? _loc2_ - 1 : _loc2_);
       }
       
@@ -101,7 +101,7 @@ package org.flixel
          var _loc2_:uint = 0;
          if(param1 != null)
          {
-            _loc2_ = param1.length;
+            _loc2_ = uint(param1.length);
             if(_loc2_ > 0)
             {
                return param1[uint(Math.random() * _loc2_)];
@@ -284,7 +284,7 @@ package org.flixel
          }
          var _loc2_:String = String(param1[0].toString());
          var _loc3_:uint = 0;
-         var _loc4_:uint = param1.length;
+         var _loc4_:uint = uint(param1.length);
          while(_loc3_ < _loc4_)
          {
             _loc2_ += ", " + param1[_loc3_++].toString();
@@ -341,11 +341,11 @@ package org.flixel
       
       public static function getClassName(param1:Object, param2:Boolean = false) : String
       {
-         var _loc3_:String = getQualifiedClassName(param1);
-         _loc3_ = _loc3_.replace("::",".");
+         var _loc3_:String = String(getQualifiedClassName(param1));
+         _loc3_ = String(_loc3_.replace("::","."));
          if(param2)
          {
-            _loc3_ = _loc3_.substr(_loc3_.lastIndexOf(".") + 1);
+            _loc3_ = String(_loc3_.substr(_loc3_.lastIndexOf(".") + 1));
          }
          return _loc3_;
       }

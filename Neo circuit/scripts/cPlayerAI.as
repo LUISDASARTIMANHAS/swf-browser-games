@@ -256,7 +256,7 @@ package
       {
          var _loc4_:Number = NaN;
          var _loc6_:cCPU = null;
-         var _loc3_:Number = Number.MAX_VALUE;
+         var _loc3_:Number = Number(Number.MAX_VALUE);
          var _loc5_:cCPU = null;
          var _loc7_:int = 0;
          while(_loc7_ < param2.length)
@@ -286,7 +286,7 @@ package
       {
          var _loc4_:Number = NaN;
          var _loc6_:cCPU = null;
-         var _loc3_:Number = Number.MAX_VALUE;
+         var _loc3_:Number = Number(Number.MAX_VALUE);
          var _loc5_:cCPU = null;
          var _loc7_:int = 0;
          while(_loc7_ < param2.length)
@@ -316,8 +316,8 @@ package
       {
          var _loc5_:Number = NaN;
          var _loc7_:cCPU = null;
-         var _loc3_:Number = Number.MAX_VALUE;
-         var _loc4_:Number = Number.MAX_VALUE;
+         var _loc3_:Number = Number(Number.MAX_VALUE);
+         var _loc4_:Number = Number(Number.MAX_VALUE);
          var _loc6_:cCPU = null;
          var _loc8_:int = 0;
          while(_loc8_ < param2.length)
@@ -343,8 +343,8 @@ package
       {
          var _loc5_:Number = NaN;
          var _loc7_:cCPU = null;
-         var _loc3_:Number = Number.MAX_VALUE;
-         var _loc4_:Number = Number.MIN_VALUE;
+         var _loc3_:Number = Number(Number.MAX_VALUE);
+         var _loc4_:Number = Number(Number.MIN_VALUE);
          var _loc6_:cCPU = null;
          var _loc8_:int = 0;
          while(_loc8_ < param2.length)

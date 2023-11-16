@@ -26,7 +26,7 @@ package utils
          var _loc6_:Array = [];
          var _loc7_:Number = (param4 + param2) / 2;
          var _loc8_:Number = (param5 + param3) / 2;
-         var _loc9_:Number = Math.min(_loc7_,_loc8_);
+         var _loc9_:Number = Number(Math.min(_loc7_,_loc8_));
          var _loc10_:Number = Math.PI * 2 / Number(param1);
          var _loc11_:int = 0;
          while(_loc11_ < param1)
@@ -110,7 +110,7 @@ package utils
             return false;
          }
          var _loc8_:Number = 1 / _loc6_;
-         var _loc9_:Number = Math.sqrt(Math.abs(_loc6_ - _loc7_));
+         var _loc9_:Number = Number(Math.sqrt(Math.abs(_loc6_ - _loc7_)));
          param4.x = param1.x + param2 * (param2 * m_cacheVec.x - m_cacheVec.y * _loc9_) * _loc8_;
          param4.y = param1.y + param2 * (param2 * m_cacheVec.y - m_cacheVec.x * _loc9_) * _loc8_;
          param5.x = param1.x + param2 * (param2 * m_cacheVec.x - m_cacheVec.y * _loc9_) * _loc8_;
@@ -272,10 +272,10 @@ package utils
          var _loc9_:Number = (param4 - param2 + _loc7_ * _loc7_) / (2 * _loc7_);
          m_cacheVec.x = param1.x + _loc8_ * (param3.x - param1.x) / _loc7_;
          m_cacheVec.y = param1.y + _loc8_ * (param3.y - param1.y) / _loc7_;
-         var _loc10_:Number = Math.sqrt(param2 * param2 - _loc8_ * _loc8_);
+         var _loc10_:Number = Number(Math.sqrt(param2 * param2 - _loc8_ * _loc8_));
          param5.x = m_cacheVec.x - _loc10_ * (param3.y - param1.y) / _loc7_;
          param5.y = m_cacheVec.y - _loc10_ * (param3.x - param1.x) / _loc7_;
-         var _loc11_:Number = Math.sqrt(param4 * param4 - _loc8_ * _loc8_);
+         var _loc11_:Number = Number(Math.sqrt(param4 * param4 - _loc8_ * _loc8_));
          param6.x = m_cacheVec.x - _loc11_ * (param3.y - param1.y) / _loc7_;
          param6.y = m_cacheVec.y - _loc11_ * (param3.x - param1.x) / _loc7_;
          return true;
@@ -287,7 +287,7 @@ package utils
          {
             return 0;
          }
-         var _loc5_:Number = Math.sqrt((param1.x - param3.x) * (param1.x - param3.x) + (param1.y - param3.y) * (param1.y - param3.y));
+         var _loc5_:Number = Number(Math.sqrt((param1.x - param3.x) * (param1.x - param3.x) + (param1.y - param3.y) * (param1.y - param3.y)));
          var _loc6_:Number = 2 * Math.acos((param4 * param4 + _loc5_ * _loc5_ - param2 * param2) / (param4 * _loc5_ * 2));
          var _loc7_:Number = 2 * Math.acos((param2 * param2 + _loc5_ * _loc5_ - param4 * param4) / (param2 * _loc5_ * 2));
          return 0.5 * _loc6_ * param4 * param4 - 0.5 * param4 * param4 * Math.sin(_loc6_) + 0.5 * _loc7_ * param2 * param2 - 0.5 * param2 * param2 * Math.sin(_loc7_);

@@ -25,7 +25,7 @@ package com.greensock.plugins
          }
          for(_loc4_ in param2)
          {
-            this.initRotation(param1,_loc4_,param1[_loc4_],typeof param2[_loc4_] == "number" ? Number(param2[_loc4_]) : param1[_loc4_] + Number(param2[_loc4_]));
+            this.initRotation(param1,_loc4_,param1[_loc4_],typeof param2[_loc4_] == "number" ? Number(Number(param2[_loc4_])) : param1[_loc4_] + Number(param2[_loc4_]));
          }
          return true;
       }

@@ -52,7 +52,7 @@ package org.flixel.plugin
             §§goto(addr20);
          }
          var _loc1_:uint = 0;
-         var _loc2_:uint = cameras.length;
+         var _loc2_:uint = uint(cameras.length);
          while(_loc1_ < _loc2_)
          {
             this.drawDebug(cameras[_loc1_++]);
@@ -66,7 +66,7 @@ package org.flixel.plugin
          {
             param1 = FlxG.camera;
          }
-         var _loc2_:int = int(this._paths.length - 1);
+         var _loc2_:int = this._paths.length - 1;
          while(_loc2_ >= 0)
          {
             _loc3_ = this._paths[_loc2_--] as FlxPath;
@@ -84,7 +84,7 @@ package org.flixel.plugin
       
       public function remove(param1:FlxPath) : void
       {
-         var _loc2_:int = this._paths.indexOf(param1);
+         var _loc2_:int = int(this._paths.indexOf(param1));
          if(_loc2_ >= 0)
          {
             this._paths.splice(_loc2_,1);
@@ -94,7 +94,7 @@ package org.flixel.plugin
       public function clear() : void
       {
          var _loc2_:FlxPath = null;
-         var _loc1_:int = int(this._paths.length - 1);
+         var _loc1_:int = this._paths.length - 1;
          while(_loc1_ >= 0)
          {
             _loc2_ = this._paths[_loc1_--] as FlxPath;

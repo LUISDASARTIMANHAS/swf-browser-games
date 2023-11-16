@@ -87,7 +87,7 @@ package org.flixel.system.debug
          var _loc9_:uint = 0;
          var _loc10_:uint = 0;
          var _loc11_:uint = 0;
-         var _loc1_:int = getTimer();
+         var _loc1_:int = int(getTimer());
          var _loc2_:int = _loc1_ - this._lastTime;
          var _loc3_:uint = 500;
          if(_loc2_ > _loc3_)

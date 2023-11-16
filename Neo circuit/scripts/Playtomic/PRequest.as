@@ -134,7 +134,7 @@ package Playtomic
          request.callback = callback;
          request.logging = false;
          url = URL + "&r=" + Math.random() + "Z";
-         timestamp = String(new Date().time).substring(0,10);
+         timestamp = String(String(new Date().time).substring(0,10));
          nonce = Encode.MD5(new Date().time * Math.random() + Log.GUID);
          pd = new Array();
          do
@@ -182,21 +182,21 @@ package Playtomic
          {
             return "";
          }
-         param1 = param1.split("%").join("%25");
-         param1 = param1.split(";").join("%3B");
-         param1 = param1.split("?").join("%3F");
-         param1 = param1.split("/").join("%2F");
-         param1 = param1.split(":").join("%3A");
-         param1 = param1.split("#").join("%23");
-         param1 = param1.split("&").join("%26");
-         param1 = param1.split("=").join("%3D");
-         param1 = param1.split("+").join("%2B");
-         param1 = param1.split("$").join("%24");
-         param1 = param1.split(",").join("%2C");
-         param1 = param1.split(" ").join("%20");
-         param1 = param1.split("<").join("%3C");
-         param1 = param1.split(">").join("%3E");
-         return param1.split("~").join("%7E");
+         param1 = String(param1.split("%").join("%25"));
+         param1 = String(param1.split(";").join("%3B"));
+         param1 = String(param1.split("?").join("%3F"));
+         param1 = String(param1.split("/").join("%2F"));
+         param1 = String(param1.split(":").join("%3A"));
+         param1 = String(param1.split("#").join("%23"));
+         param1 = String(param1.split("&").join("%26"));
+         param1 = String(param1.split("=").join("%3D"));
+         param1 = String(param1.split("+").join("%2B"));
+         param1 = String(param1.split("$").join("%24"));
+         param1 = String(param1.split(",").join("%2C"));
+         param1 = String(param1.split(" ").join("%20"));
+         param1 = String(param1.split("<").join("%3C"));
+         param1 = String(param1.split(">").join("%3E"));
+         return String(param1.split("~").join("%7E"));
       }
       
       private static function GenerateKey(param1:String, param2:String, param3:Array) : void
@@ -208,7 +208,7 @@ package Playtomic
       private static function TimeoutHandler(param1:Event) : void
       {
          var _loc2_:PRequest = null;
-         var _loc3_:int = int(Queue.length - 1);
+         var _loc3_:int = Queue.length - 1;
          loop0:
          while(_loc3_ > -1)
          {
@@ -265,8 +265,8 @@ package Playtomic
             return;
          }
          var _loc3_:XML = XML(_loc2_.data);
-         var _loc4_:int = parseInt(_loc3_["status"]);
-         var _loc5_:int = parseInt(_loc3_["errorcode"]);
+         var _loc4_:int = int(parseInt(_loc3_["status"]));
+         var _loc5_:int = int(parseInt(_loc3_["errorcode"]));
          _loc2_.complete(_loc2_.callback,_loc2_.postdata,_loc3_,new Response(_loc4_,_loc5_));
       }
       

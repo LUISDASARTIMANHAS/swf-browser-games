@@ -154,11 +154,11 @@ package org.flixel.plugin.photonstorm
       {
          if(param2 > param1.width)
          {
-            param2 = param1.width;
+            param2 = int(param1.width);
          }
          if(param3 > param1.height)
          {
-            param3 = param1.height;
+            param3 = int(param1.height);
          }
          var _loc10_:BitmapData = createGradientBitmapData(param2,param3,param4,param7,param8,param9);
          param1.copyPixels(_loc10_,new Rectangle(0,0,_loc10_.width,_loc10_.height),new Point(param5,param6),null,null,true);

@@ -70,9 +70,9 @@ package utils
       
       public static function drawGradientLine(param1:BitmapData, param2:Number, param3:Number, param4:Number, param5:Number, param6:Array, param7:uint = 1, param8:Number = 1) : void
       {
-         var _loc9_:Number = Math.abs(param4 - param2);
-         var _loc10_:Number = Math.abs(param5 - param3);
-         var _loc11_:Number = Math.atan2(_loc10_,_loc9_);
+         var _loc9_:Number = Number(Math.abs(param4 - param2));
+         var _loc10_:Number = Number(Math.abs(param5 - param3));
+         var _loc11_:Number = Number(Math.atan2(_loc10_,_loc9_));
          var _loc12_:Number = param2;
          var _loc13_:Number = param3;
          if(param2 > param4)

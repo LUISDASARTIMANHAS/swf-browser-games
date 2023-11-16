@@ -63,10 +63,10 @@ package org.flixel.system
          var _loc2_:Array = param1.split("\n");
          this.seed = Number(_loc2_[0]);
          var _loc4_:uint = 1;
-         var _loc5_:uint = _loc2_.length;
+         var _loc5_:uint = uint(_loc2_.length);
          while(_loc4_ < _loc5_)
          {
-            _loc3_ = _loc2_[_loc4_++] as String;
+            _loc3_ = String(_loc2_[_loc4_++] as String);
             if(_loc3_.length > 3)
             {
                var _loc6_:*;

@@ -58,7 +58,7 @@ package org.flixel
             this.cameras = FlxG.cameras;
          }
          var _loc2_:uint = 0;
-         var _loc3_:uint = this.cameras.length;
+         var _loc3_:uint = uint(this.cameras.length);
          while(_loc2_ < _loc3_)
          {
             _loc1_ = this.cameras[_loc2_++];

@@ -99,19 +99,19 @@ package Playtomic
          }
          try
          {
-            _loc1_ = String(ExternalInterface.call("window.location.href.toString"));
+            _loc1_ = String(String(ExternalInterface.call("window.location.href.toString")));
             if(_loc1_.indexOf("?") == -1)
             {
                return null;
             }
-            _loc2_ = _loc1_.substring(_loc1_.indexOf("leaderboard=") + 12);
+            _loc2_ = String(_loc1_.substring(_loc1_.indexOf("leaderboard=") + 12));
             if(_loc2_.indexOf("&") > -1)
             {
-               _loc2_ = _loc2_.substring(0,_loc2_.indexOf("&"));
+               _loc2_ = String(_loc2_.substring(0,_loc2_.indexOf("&")));
             }
             if(_loc2_.indexOf("#") > -1)
             {
-               _loc2_ = _loc2_.substring(0,_loc2_.indexOf("#"));
+               _loc2_ = String(_loc2_.substring(0,_loc2_.indexOf("#")));
             }
             return _loc2_;
          }
@@ -129,14 +129,14 @@ package Playtomic
          {
             param4 = new Object();
          }
-         var _loc5_:Boolean = param4.hasOwnProperty("allowduplicates") ? Boolean(param4["allowduplicates"]) : false;
-         var _loc6_:Boolean = param4.hasOwnProperty("global") ? Boolean(param4["global"]) : true;
-         var _loc7_:Boolean = param4.hasOwnProperty("highest") ? Boolean(param4["highest"]) : true;
-         var _loc8_:String = param4.hasOwnProperty("mode") ? String(param4["mode"]) : "alltime";
-         var _loc9_:Object = param4.hasOwnProperty("customfilters") ? param4["customfilters"] : {};
-         var _loc10_:int = param4.hasOwnProperty("page") ? int(param4["page"]) : 1;
-         var _loc11_:int = param4.hasOwnProperty("perpage") ? int(param4["perpage"]) : 20;
-         var _loc12_:Array = param4.hasOwnProperty("friendslist") ? param4["friendslist"] : new Array();
+         var _loc5_:Boolean = !!param4.hasOwnProperty("allowduplicates") ? Boolean(param4["allowduplicates"]) : false;
+         var _loc6_:Boolean = !!param4.hasOwnProperty("global") ? Boolean(param4["global"]) : true;
+         var _loc7_:Boolean = !!param4.hasOwnProperty("highest") ? Boolean(param4["highest"]) : true;
+         var _loc8_:String = !!param4.hasOwnProperty("mode") ? String(param4["mode"]) : "alltime";
+         var _loc9_:Object = !!param4.hasOwnProperty("customfilters") ? param4["customfilters"] : {};
+         var _loc10_:int = !!param4.hasOwnProperty("page") ? int(param4["page"]) : 1;
+         var _loc11_:int = !!param4.hasOwnProperty("perpage") ? int(param4["perpage"]) : 20;
+         var _loc12_:Array = !!param4.hasOwnProperty("friendslist") ? param4["friendslist"] : new Array();
          var _loc13_:Object;
          (_loc13_ = new Object())["url"] = Log.SourceUrl;
          _loc13_["table"] = param2;
@@ -228,12 +228,12 @@ package Playtomic
          {
             param4 = new Object();
          }
-         var _loc5_:Boolean = param4.hasOwnProperty("allowduplicates") ? Boolean(param4["allowduplicates"]) : false;
-         var _loc6_:Boolean = param4.hasOwnProperty("highest") ? Boolean(param4["highest"]) : true;
+         var _loc5_:Boolean = !!param4.hasOwnProperty("allowduplicates") ? Boolean(param4["allowduplicates"]) : false;
+         var _loc6_:Boolean = !!param4.hasOwnProperty("highest") ? Boolean(param4["highest"]) : true;
          var _loc7_:String;
-         if((_loc7_ = param1.Points.toString()).indexOf(".") > -1)
+         if((_loc7_ = String(param1.Points.toString())).indexOf(".") > -1)
          {
-            _loc7_ = _loc7_.substring(0,_loc7_.indexOf("."));
+            _loc7_ = String(_loc7_.substring(0,_loc7_.indexOf(".")));
          }
          var _loc8_:Object = new Object();
          var _loc9_:int = 0;
@@ -282,14 +282,14 @@ package Playtomic
          {
             param3 = new Object();
          }
-         var _loc4_:Boolean = param3.hasOwnProperty("global") ? Boolean(param3["global"]) : true;
-         var _loc5_:Boolean = param3.hasOwnProperty("highest") ? Boolean(param3["highest"]) : true;
-         var _loc6_:String = param3.hasOwnProperty("mode") ? String(param3["mode"]) : "alltime";
-         var _loc7_:Object = param3.hasOwnProperty("customfilters") ? param3["customfilters"] : new Object();
-         var _loc8_:int = param3.hasOwnProperty("page") ? int(param3["page"]) : 1;
-         var _loc9_:int = param3.hasOwnProperty("perpage") ? int(param3["perpage"]) : 20;
-         var _loc10_:Boolean = param3.hasOwnProperty("facebook") ? Boolean(param3["facebook"]) : false;
-         var _loc11_:Array = param3.hasOwnProperty("friendslist") ? param3["friendslist"] : new Array();
+         var _loc4_:Boolean = !!param3.hasOwnProperty("global") ? Boolean(param3["global"]) : true;
+         var _loc5_:Boolean = !!param3.hasOwnProperty("highest") ? Boolean(param3["highest"]) : true;
+         var _loc6_:String = !!param3.hasOwnProperty("mode") ? String(param3["mode"]) : "alltime";
+         var _loc7_:Object = !!param3.hasOwnProperty("customfilters") ? param3["customfilters"] : new Object();
+         var _loc8_:int = !!param3.hasOwnProperty("page") ? int(param3["page"]) : 1;
+         var _loc9_:int = !!param3.hasOwnProperty("perpage") ? int(param3["perpage"]) : 20;
+         var _loc10_:Boolean = !!param3.hasOwnProperty("facebook") ? Boolean(param3["facebook"]) : false;
+         var _loc11_:Array = !!param3.hasOwnProperty("friendslist") ? param3["friendslist"] : new Array();
          var _loc12_:Object = new Object();
          var _loc13_:int = 0;
          for(_loc14_ in _loc7_)
@@ -350,17 +350,17 @@ package Playtomic
          var _loc12_:PlayerScore = null;
          var _loc13_:XMLList = null;
          var _loc14_:XML = null;
-         var _loc4_:int = parseInt(param1["numscores"]);
+         var _loc4_:int = int(parseInt(param1["numscores"]));
          var _loc5_:Array = new Array();
          var _loc6_:XMLList = param1["score"];
          for each(_loc11_ in _loc6_)
          {
             _loc7_ = String(_loc11_["sdate"]);
-            _loc8_ = int(_loc7_.substring(_loc7_.lastIndexOf("/") + 1));
+            _loc8_ = int(int(_loc7_.substring(_loc7_.lastIndexOf("/") + 1)));
             do
             {
-               _loc9_ = int(_loc7_.substring(0,_loc7_.indexOf("/")));
-               _loc10_ = int(_loc7_.substring(_loc7_.indexOf("/") + 1).substring(0,2));
+               _loc9_ = int(int(_loc7_.substring(0,_loc7_.indexOf("/"))));
+               _loc10_ = int(int(_loc7_.substring(_loc7_.indexOf("/") + 1).substring(0,2)));
             }
             while(false);
             

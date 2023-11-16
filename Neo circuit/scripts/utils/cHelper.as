@@ -155,7 +155,7 @@ package utils
          var _loc4_:int;
          var _loc5_:int = (_loc4_ = _loc2_ % HOUR_IN_SECONDS) / MINUTE_IN_SECONDS;
          var _loc6_:int = _loc4_ % MINUTE_IN_SECONDS;
-         return (_loc7_ = "#minutes#:#seconds#:#milliseconds#").replace(m_minuteSubst,cStringUtil.sprintf("%02u",_loc5_)).replace(m_secondSubst,cStringUtil.sprintf("%02u",_loc6_)).replace(m_millisecondsSubst,cStringUtil.sprintf("%02u",_loc3_));
+         return String((_loc7_ = "#minutes#:#seconds#:#milliseconds#").replace(m_minuteSubst,cStringUtil.sprintf("%02u",_loc5_)).replace(m_secondSubst,cStringUtil.sprintf("%02u",_loc6_)).replace(m_millisecondsSubst,cStringUtil.sprintf("%02u",_loc3_)));
       }
       
       public static function sin(param1:Number) : Number

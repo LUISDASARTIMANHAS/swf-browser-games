@@ -807,7 +807,7 @@ package
             while(false);
             
          }
-         var _loc4_:int = int.MAX_VALUE;
+         var _loc4_:int = int(int.MAX_VALUE);
          _loc2_ = 0;
          while(_loc2_ < this.connections.length)
          {

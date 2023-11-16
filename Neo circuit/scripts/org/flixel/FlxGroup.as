@@ -123,7 +123,7 @@ package org.flixel
             return;
          }
          var _loc3_:uint = this._maxSize;
-         var _loc4_:uint = this.members.length;
+         var _loc4_:uint = uint(this.members.length);
          while(_loc3_ < _loc4_)
          {
             _loc2_ = this.members[_loc3_++] as FlxBasic;
@@ -142,7 +142,7 @@ package org.flixel
             return param1;
          }
          var _loc2_:uint = 0;
-         var _loc3_:uint = this.members.length;
+         var _loc3_:uint = uint(this.members.length);
          while(_loc2_ < _loc3_)
          {
             if(this.members[_loc2_] == null)
@@ -217,7 +217,7 @@ package org.flixel
       
       public function remove(param1:FlxBasic, param2:Boolean = false) : FlxBasic
       {
-         var _loc3_:int = this.members.indexOf(param1);
+         var _loc3_:int = int(this.members.indexOf(param1));
          §§push(_loc3_ < 0);
          if(!(_loc3_ < 0))
          {
@@ -252,7 +252,7 @@ package org.flixel
       
       public function replace(param1:FlxBasic, param2:FlxBasic) : FlxBasic
       {
-         var _loc3_:int = this.members.indexOf(param1);
+         var _loc3_:int = int(this.members.indexOf(param1));
          if(_loc3_ < 0 || _loc3_ >= this.members.length)
          {
             return null;
@@ -342,7 +342,7 @@ package org.flixel
       {
          var _loc1_:FlxBasic = null;
          var _loc2_:uint = 0;
-         var _loc3_:uint = this.members.length;
+         var _loc3_:uint = uint(this.members.length);
          while(_loc2_ < _loc3_)
          {
             if(this.members[_loc2_] == null)

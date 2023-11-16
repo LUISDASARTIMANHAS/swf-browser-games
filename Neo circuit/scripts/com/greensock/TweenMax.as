@@ -47,7 +47,7 @@ package com.greensock
          }
          this.yoyo = Boolean(this.vars.yoyo);
          this._repeat = uint(this.vars.repeat);
-         this._repeatDelay = !!this.vars.repeatDelay ? Number(this.vars.repeatDelay) : 0;
+         this._repeatDelay = !!this.vars.repeatDelay ? Number(Number(this.vars.repeatDelay)) : 0;
          this.cacheIsDirty = true;
          if(Boolean(this.vars.onCompleteListener) || Boolean(this.vars.onInitListener) || Boolean(this.vars.onUpdateListener) || Boolean(this.vars.onStartListener) || Boolean(this.vars.onRepeatListener) || Boolean(this.vars.onReverseCompleteListener))
          {
@@ -104,7 +104,7 @@ package com.greensock
          var onCompleteAllParams:Array = param6;
          var l:int = int(targets.length);
          var a:Array = [];
-         var curDelay:Number = "delay" in vars ? Number(vars.delay) : 0;
+         var curDelay:Number = "delay" in vars ? Number(Number(vars.delay)) : 0;
          onCompleteProxy = vars.onComplete;
          onCompleteParamsProxy = vars.onCompleteParams;
          var lastIndex:int = stagger <= 0 ? 0 : l - 1;
@@ -448,7 +448,7 @@ package com.greensock
       {
          var _loc9_:Array = null;
          var _loc10_:int = 0;
-         var _loc8_:PropTween = new PropTween(param1,param2,param3,typeof param4 == "number" ? param4 - param3 : Number(param4),param5,param6,param7);
+         var _loc8_:PropTween = new PropTween(param1,param2,param3,typeof param4 == "number" ? param4 - param3 : Number(Number(param4)),param5,param6,param7);
          if(param6 && param5 == "_MULTIPLE_")
          {
             _loc10_ = int((_loc9_ = param1.overwriteProps).length);
@@ -493,7 +493,7 @@ package com.greensock
       {
          this.yoyo = Boolean(this.vars.yoyo == true);
          this._repeat = !!this.vars.repeat ? int(Number(this.vars.repeat)) : 0;
-         this._repeatDelay = !!this.vars.repeatDelay ? Number(this.vars.repeatDelay) : 0;
+         this._repeatDelay = !!this.vars.repeatDelay ? Number(Number(this.vars.repeatDelay)) : 0;
          this._hasUpdateListener = false;
          if(this.vars.onCompleteListener != null || this.vars.onUpdateListener != null || this.vars.onStartListener != null)
          {
@@ -929,17 +929,17 @@ package com.greensock
       
       public function hasEventListener(param1:String) : Boolean
       {
-         return this._dispatcher == null ? false : this._dispatcher.hasEventListener(param1);
+         return this._dispatcher == null ? false : Boolean(this._dispatcher.hasEventListener(param1));
       }
       
       public function willTrigger(param1:String) : Boolean
       {
-         return this._dispatcher == null ? false : this._dispatcher.willTrigger(param1);
+         return this._dispatcher == null ? false : Boolean(this._dispatcher.willTrigger(param1));
       }
       
       public function dispatchEvent(param1:Event) : Boolean
       {
-         return this._dispatcher == null ? false : this._dispatcher.dispatchEvent(param1);
+         return this._dispatcher == null ? false : Boolean(this._dispatcher.dispatchEvent(param1));
       }
       
       public function get currentProgress() : Number

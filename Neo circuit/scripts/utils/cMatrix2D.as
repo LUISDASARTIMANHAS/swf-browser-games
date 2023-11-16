@@ -94,8 +94,8 @@ package utils
       
       public function rotate(param1:Number) : void
       {
-         var _loc2_:Number = Math.sin(param1);
-         var _loc3_:Number = Math.cos(param1);
+         var _loc2_:Number = Number(Math.sin(param1));
+         var _loc3_:Number = Number(Math.cos(param1));
          m_transform.set(_loc3_,_loc2_,0,-_loc2_,_loc3_,0,0,0,1);
          this.multiply(m_transform);
       }

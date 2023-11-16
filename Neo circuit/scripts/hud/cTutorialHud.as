@@ -275,7 +275,7 @@ package hud
       {
          var _loc2_:cCPU = null;
          var _loc3_:cCPU = null;
-         var _loc1_:int = int.MAX_VALUE;
+         var _loc1_:int = int(int.MAX_VALUE);
          var _loc4_:Array = cObjectManager.getInstance().map.cpuList;
          var _loc5_:int = 0;
          while(_loc5_ < _loc4_.length)
@@ -298,7 +298,7 @@ package hud
       {
          var _loc2_:cCPU = null;
          var _loc3_:cCPU = null;
-         var _loc1_:int = int.MAX_VALUE;
+         var _loc1_:int = int(int.MAX_VALUE);
          var _loc4_:Array = cObjectManager.getInstance().map.cpuList;
          var _loc5_:int = 0;
          while(_loc5_ < _loc4_.length)

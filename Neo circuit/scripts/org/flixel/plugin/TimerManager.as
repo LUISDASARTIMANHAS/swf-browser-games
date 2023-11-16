@@ -24,7 +24,7 @@ package org.flixel.plugin
       override public function update() : void
       {
          var _loc2_:FlxTimer = null;
-         var _loc1_:int = int(this._timers.length - 1);
+         var _loc1_:int = this._timers.length - 1;
          while(_loc1_ >= 0)
          {
             _loc2_ = this._timers[_loc1_--] as FlxTimer;
@@ -57,7 +57,7 @@ package org.flixel.plugin
       
       public function remove(param1:FlxTimer) : void
       {
-         var _loc2_:int = this._timers.indexOf(param1);
+         var _loc2_:int = int(this._timers.indexOf(param1));
          if(_loc2_ >= 0)
          {
             this._timers.splice(_loc2_,1);
@@ -67,7 +67,7 @@ package org.flixel.plugin
       public function clear() : void
       {
          var _loc2_:FlxTimer = null;
-         var _loc1_:int = int(this._timers.length - 1);
+         var _loc1_:int = this._timers.length - 1;
          while(_loc1_ >= 0)
          {
             _loc2_ = this._timers[_loc1_--] as FlxTimer;
