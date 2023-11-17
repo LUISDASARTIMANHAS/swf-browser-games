@@ -1,0 +1,1 @@
+Level-critical buildings and objects will be highlighted at the beginning of each level. If you hit these objects with the train or with flying debris then the level is over!

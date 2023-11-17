@@ -1,0 +1,1 @@
+Hitting vehicles will send them flying; make sure they don’t hit anything important!
