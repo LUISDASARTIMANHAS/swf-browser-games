@@ -1,0 +1,1 @@
+ausstieg = 0;
