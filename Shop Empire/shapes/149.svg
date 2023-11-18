@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:ffdec="https://www.free-decompiler.com/flash" xmlns:xlink="http://www.w3.org/1999/xlink" ffdec:objectType="shape" height="304.5px" width="640.0px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1.0, 0.0, 0.0, 1.0, 0.0, -175.5)">
+    <pattern ffdec:smoothed="false" height="13" id="PatternID_149_1" overflow="visible" patternTransform="matrix(3.9808, 0.0, 0.0, 1.0, 115.0, 323.2)" patternUnits="userSpaceOnUse" viewBox="0 0 103 13" width="103">
+      <image height="13" width="103" xlink:href="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAANCAIAAAA7TOeSAAAA8ElEQVR4Xu3WwQ2DMAwFULbpMAySDboDe3SM3jISA1AUp1/Wd1yUuBKXvINlgRrF/1CzLNOYd8u+71KbzV8cX/xCvfqBfxNgB0QCVk3t1ZJzlqob4j2/dM4sNQLnDPBuTiPrQKA7NTRBmDkC58TZAZGAVVN7tqSUpOqGeM8vnReSGoFzBng3p5F1IFBTm0Y8lHVddRVe32XbNttE2NOk6eVNR2kAxzd14NVa2DWsm6CjfDfw33snnBNnB0QCVk2Nl0SRzUKxvOeXjrt3qHdzGlkHAjM1RiPrQKCmxqu1sGtYN0H57i8PYgdEAlZNber1AQFLeqmK0jELAAAAAElFTkSuQmCC"/>
+    </pattern>
+    <path d="M525.0 336.2 L115.0 336.2 115.0 323.2 525.0 323.2 525.0 336.2" ffdec:fill-bitmapId="148" style="fill:url(#PatternID_149_1)"/>
+    <pattern ffdec:smoothed="false" height="13" id="PatternID_149_2" overflow="visible" patternTransform="matrix(3.9808, 0.0, 0.0, 1.0, 114.95, 175.5)" patternUnits="userSpaceOnUse" viewBox="0 0 103 13" width="103">
+      <image height="13" width="103" xlink:href="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAANCAIAAAA7TOeSAAAA8ElEQVR4Xu3WwQ2DMAwFULbpMAySDboDe3SM3jISA1AUp1/Wd1yUuBKXvINlgRrF/1CzLNOYd8u+71KbzV8cX/xCvfqBfxNgB0QCVk3t1ZJzlqob4j2/dM4sNQLnDPBuTiPrQKA7NTRBmDkC58TZAZGAVVN7tqSUpOqGeM8vnReSGoFzBng3p5F1IFBTm0Y8lHVddRVe32XbNttE2NOk6eVNR2kAxzd14NVa2DWsm6CjfDfw33snnBNnB0QCVk2Nl0SRzUKxvOeXjrt3qHdzGlkHAjM1RiPrQKCmxqu1sGtYN0H57i8PYgdEAlZNber1AQFLeqmK0jELAAAAAElFTkSuQmCC"/>
+    </pattern>
+    <path d="M524.95 188.5 L114.95 188.5 114.95 175.5 524.95 175.5 524.95 188.5" ffdec:fill-bitmapId="148" style="fill:url(#PatternID_149_2)"/>
+    <pattern ffdec:smoothed="false" height="47" id="PatternID_149_3" overflow="visible" patternTransform="matrix(1.6667, 0.0, 0.0, 1.0, 0.0, 433.0)" patternUnits="userSpaceOnUse" viewBox="0 0 384 47" width="384">
+      <image height="47" width="384" xlink:href="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAAYAAAAAvCAIAAABlmIpnAAAA6UlEQVR4Xu3UMQ3DQBBFwQPjADCPMHBjGkZhhVpQBEZ0vet7zYyetlgAf1znKUlJ47VtkpQ03vsuSUkGSFKWAZKUZYAkZY0fQGR8ASIGCMgYICAzB+hz367ruuvvePy6rusuuHOAJCnJAEnKMkCSsgyQpCwDJCnLAEnKMkCSsgyQpCwDJCnLAEnKMkCSsgyQpCwDJCnLAEnKmgN0HIfruu76Ox6/ruu6C+4cIICEAQIyBgjIGCAgY4CAjAECMgYIyBggIGOAgIwBAjIGCMgYICBjgICMAQIyBgjIGCAgY4CAjAECMgYIyPwBnbHQsDnxvLEAAAAASUVORK5CYII="/>
+    </pattern>
+    <path d="M0.0 433.0 L640.0 433.0 640.0 480.0 0.0 480.0 0.0 433.0" ffdec:fill-bitmapId="147" style="fill:url(#PatternID_149_3)"/>
+    <pattern ffdec:smoothed="false" height="88" id="PatternID_149_4" overflow="visible" patternTransform="matrix(1.0, 0.0, 0.0, 1.0, 132.35, 350.35)" patternUnits="userSpaceOnUse" viewBox="0 0 16 88" width="16">
+      <image height="88" width="16" xlink:href="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAABYCAYAAAD8+HdgAAABDUlEQVR4Xu2WwQ3CMAxFu0U3YYOuwFSoA3FlAEbhwpmiHynI/XITJ+6hRf7SvzT+L44bVIahoHEcF5ifm4TgPM/JXRCEpmlKbgbIcDNEC1cheVit/oV5J6tXkB7LUwyP22X5vO7J7+dVdV5H7SrMgJoPCoAskM0wtCtATr36BrIYYH6FUhrEHIbcAL6ubK5XhcLNH45VEtIchk4K4IlLgDTnkrCQvwM1FyHdHbAYwOtVBSAAUAACAAUgAFAATg9AwPyvRJPcvauLkwO0ATYP0tVBluseQC6A6wjuIWq7N3XhBkAo1Mx1qv5gBgHYCVAy16+EAr487CKk1H71GJbdi11Ydi92wcOqmfPdHXwBi9yAMWlWRscAAAAASUVORK5CYII="/>
+    </pattern>
+    <path d="M148.35 350.35 L148.35 438.35 132.35 438.35 132.35 350.35 148.35 350.35" ffdec:fill-bitmapId="146" style="fill:url(#PatternID_149_4)"/>
+    <pattern ffdec:smoothed="false" height="88" id="PatternID_149_5" overflow="visible" patternTransform="matrix(1.0, 0.0, 0.0, 1.0, 493.3, 349.35)" patternUnits="userSpaceOnUse" viewBox="0 0 16 88" width="16">
+      <image height="88" width="16" xlink:href="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAABYCAYAAAD8+HdgAAABDUlEQVR4Xu2WwQ3CMAxFu0U3YYOuwFSoA3FlAEbhwpmiHynI/XITJ+6hRf7SvzT+L44bVIahoHEcF5ifm4TgPM/JXRCEpmlKbgbIcDNEC1cheVit/oV5J6tXkB7LUwyP22X5vO7J7+dVdV5H7SrMgJoPCoAskM0wtCtATr36BrIYYH6FUhrEHIbcAL6ubK5XhcLNH45VEtIchk4K4IlLgDTnkrCQvwM1FyHdHbAYwOtVBSAAUAACAAUgAFAATg9AwPyvRJPcvauLkwO0ATYP0tVBluseQC6A6wjuIWq7N3XhBkAo1Mx1qv5gBgHYCVAy16+EAr487CKk1H71GJbdi11Ydi92wcOqmfPdHXwBi9yAMWlWRscAAAAASUVORK5CYII="/>
+    </pattern>
+    <path d="M509.3 349.35 L509.3 437.35 493.3 437.35 493.3 349.35 509.3 349.35" ffdec:fill-bitmapId="146" style="fill:url(#PatternID_149_5)"/>
+  </g>
+</svg>

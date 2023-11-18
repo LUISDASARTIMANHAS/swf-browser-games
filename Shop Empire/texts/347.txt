@@ -1,0 +1,3 @@
+New booth
+--- RECORDSEPARATOR ---
+available

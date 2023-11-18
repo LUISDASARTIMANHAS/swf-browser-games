@@ -1,0 +1,5 @@
+Note: Saving this game doesn't save your
+--- RECORDSEPARATOR ---
+current status but the game will copy your 
+--- RECORDSEPARATOR ---
+last automatic saved data to another slot

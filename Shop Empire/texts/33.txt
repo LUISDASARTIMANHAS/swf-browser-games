@@ -1,0 +1,7 @@
+Medal Popup
+--- RECORDSEPARATOR ---
+Place this clip on the root of your movie, 
+--- RECORDSEPARATOR ---
+spanning any frames where medals are 
+--- RECORDSEPARATOR ---
+called. (this clip is hidden)

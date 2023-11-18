@@ -1,0 +1,5 @@
+Unsaved data will be 
+--- RECORDSEPARATOR ---
+lost. Are you sure to 
+--- RECORDSEPARATOR ---
+restart the game?
