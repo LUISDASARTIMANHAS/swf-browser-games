@@ -1,0 +1,9 @@
+Use Extinguishers "E" 
+--- RECORDSEPARATOR ---
+(
+--- RECORDSEPARATOR ---
+E
+--- RECORDSEPARATOR ---
+xtinguisher)
+--- RECORDSEPARATOR ---
+ button.

@@ -1,0 +1,1 @@
+Control the aircraft speed with Up/Down buttons.

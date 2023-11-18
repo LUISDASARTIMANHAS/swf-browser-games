@@ -1,0 +1,15 @@
+There are three types of flap positions, 
+--- RECORDSEPARATOR ---
+Take off
+--- RECORDSEPARATOR ---
+, 
+--- RECORDSEPARATOR ---
+Normal
+--- RECORDSEPARATOR ---
+ and 
+--- RECORDSEPARATOR ---
+Landing
+--- RECORDSEPARATOR ---
+, these are all 
+--- RECORDSEPARATOR ---
+quite self explainatory and do exactly that.

@@ -1,0 +1,1 @@
+Control the aircraft rotation with Left/Right buttons.

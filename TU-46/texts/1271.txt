@@ -1,0 +1,3 @@
+It's recommended to fly at a high altitude,
+--- RECORDSEPARATOR ---
+incase engine fail, you will have enough time to restart the engine.

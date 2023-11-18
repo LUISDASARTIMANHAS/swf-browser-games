@@ -1,0 +1,3 @@
+The game saves automaticly, 
+--- RECORDSEPARATOR ---
+you can leave and continue your game later.
