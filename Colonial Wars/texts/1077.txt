@@ -1,0 +1,7 @@
+To deselect
+--- RECORDSEPARATOR ---
+ the last 
+--- RECORDSEPARATOR ---
+pointed island 
+--- RECORDSEPARATOR ---
+press Ctrl

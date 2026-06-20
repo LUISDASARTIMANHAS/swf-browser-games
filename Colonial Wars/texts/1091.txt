@@ -1,0 +1,7 @@
+Max
+--- RECORDSEPARATOR ---
+ – the maximum army strength on 
+--- RECORDSEPARATOR ---
+the island; in case of exceeding it will 
+--- RECORDSEPARATOR ---
+go down.
