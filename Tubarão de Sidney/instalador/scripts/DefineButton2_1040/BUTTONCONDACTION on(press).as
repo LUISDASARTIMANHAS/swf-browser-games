@@ -1,0 +1,3 @@
+on(press){
+   prevFrame();
+}

@@ -1,0 +1,2 @@
+Mouse.show();
+stop();

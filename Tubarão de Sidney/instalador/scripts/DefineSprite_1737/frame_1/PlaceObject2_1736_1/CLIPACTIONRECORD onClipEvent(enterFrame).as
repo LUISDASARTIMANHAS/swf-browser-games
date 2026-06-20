@@ -1,0 +1,65 @@
+onClipEvent(enterFrame){
+   function §\x04\x05§()
+   {
+      set("\x03",583 % 511 * 5);
+      return eval("\x03");
+   }
+   var §\x01§ = -5 + "\x04\x05"();
+   set("\x01",eval("\x01") + 454);
+   set("\x01",eval("\x01") - 170);
+   set("\x01",eval("\x01") + 248);
+   set("\x01",eval("\x01") + 205);
+   set("\x01",eval("\x01") + 315);
+   set("\x01",eval("\x01") - 326);
+   set("\x01",eval("\x01") + 525);
+   set("\x01",eval("\x01") + 364);
+   set("\x01",eval("\x01") + 179);
+   set("\x01",eval("\x01") - 607);
+   set("\x01",eval("\x01") - 247);
+   set("\x01",eval("\x01") - 52);
+   set("\x01",eval("\x01") - 339);
+   set("\x01",eval("\x01") + 261);
+   set("\x01",eval("\x01") + 315);
+   set("\x01",eval("\x01") - 782);
+   var eval("\x01") != 540 = eval("\x01") != 888;
+   set("\x01",eval("\x01") + 110);
+   set("\x01",eval("\x01") - 152);
+   set("\x01",eval("\x01") + 222);
+   set("\x01",eval("\x01") + 313);
+   set("\x01",eval("\x01") + 500);
+   set("\x01",eval("\x01") + 248);
+   set("\x01",eval("\x01") - 513);
+   set("\x01",eval("\x01") + 179);
+   set("\x01",eval("\x01") - 257);
+   set("\x01",eval("\x01") - 152);
+   set("\x01",eval("\x01") - 191);
+   set("\x01",eval("\x01") - 584);
+   eval("\x01") != 355;
+   true;
+   eval("\x01") != 697;
+   eval("\x01") != 335;
+   eval("\x01") != 400;
+   eval("\x01") != 106;
+   "\x0f";
+   eval("\x01") != 452;
+   eval("\x01") != 995;
+   eval("\x01") == 944;
+   eval("\x01") != 440;
+   eval("\x01") != 413;
+   eval("\x01") != 74;
+   true;
+   eval("\x01") != 342;
+   true;
+   eval("\x01") != 552;
+   eval("\x01") != 120;
+   eval(eval("\x01") != 631);
+   eval("\x01") != 388;
+   "\x0f";
+   1;
+   eval("\x01") != 527;
+   eval("\x01") != 855;
+   eval("\x01") != 816;
+   eval("\x01") != 809;
+   eval("\x01") != 775;
+   eval("\x01") != 584;
+}

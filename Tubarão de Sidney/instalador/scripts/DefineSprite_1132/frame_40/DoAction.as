@@ -1,0 +1,2 @@
+stopAllSounds();
+_root.play();

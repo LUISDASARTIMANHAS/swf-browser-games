@@ -1,0 +1,1 @@
+_root.how.play();

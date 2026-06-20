@@ -1,0 +1,2 @@
+stopAllSounds();
+Mouse.hide();
